@@ -21,33 +21,44 @@ plt.title('Hitrate vs. Delay')
 plt.grid(True)
 plt.gca().set_facecolor('#f7f7f7')
 
-#select all events that have max difference of 0.8 to neighbouring events
+selected_hits = hitrate[11:17]
+selected_delays = delay[11:17]
 
-treshold = 0.8
+mean = np.mean(selected_hits)
 
-def select_events(delay, hitrate, treshold):
-    selected_delay = []
-    selected_hitrate = []
-    for i in range(1, len(delay)-1):
-        if (abs(hitrate[i] - hitrate[i-1]) + abs(hitrate[i] - hitrate[i+1])) < treshold:
-            selected_delay.append(delay[i])
-            selected_hitrate.append(hitrate[i])
-    return selected_delay, selected_hitrate
+plt.fill_between(selected_delays, unp.nominal_values(mean)-unp.std_devs(mean), unp.nominal_values(mean)+unp.std_devs(mean), color='blue', alpha=0.3, label='Mittelwert des Plateaus mit Standardfehler')
 
-selected_delay, selected_hitrate = select_events(delay, hitrate, treshold)
+print('Mittelwert des Plateaus:', mean)
 
-selected_hitrate = np.array(selected_hitrate)
-selected_delay = np.array(selected_delay)
+fwhm_y = mean / 2
 
-#mean = np.mean(selected_hitrate)
-#std = np.std(selected_hitrate)
-#
-##plot area around mean
-#plt.fill_between(selected_delay, mean-std, mean+std, color='blue', alpha=0.3, label='1$\sigma$-Umgebung')
+def sigmoid(x, a, b, c, d):
+    return a / (1 + np.exp(-b*(x-c))) + d
 
-print(selected_delay)
-print(selected_hitrate)
+params, covariance = curve_fit(sigmoid, delay[0:11], unp.nominal_values(hitrate[0:11]), p0=[0.5, 0.1, 10, 0.5], sigma=unp.std_devs(hitrate[0:11]))
+params2, covariance2 = curve_fit(sigmoid, delay[15:30], unp.nominal_values(hitrate[15:30]), p0=[60, -0.16, 10, -2],sigma=unp.std_devs(hitrate[15:30]))
 
-plt.legend()
+errors = np.sqrt(np.diag(covariance))
+errors2 = np.sqrt(np.diag(covariance2))
 
-#plt.savefig('delay.pdf')
+x = np.linspace(-16, -6, 1000)
+x2 = np.linspace(1, 12, 1000)
+
+fit = sigmoid(x, *params)
+fit2 = sigmoid(x2, *params2)
+
+idx = (np.abs(fit - fwhm_y)).argmin()
+idx2 = (np.abs(fit2 - fwhm_y)).argmin()
+
+fwhm_x = x[idx]
+fwhm_x2 = x2[idx2]
+
+plt.axvline(x=fwhm_x, color='green', linestyle='--', label='FWHM', alpha=0.7)
+plt.axvline(x=fwhm_x2, color='green', linestyle='--', alpha=0.7)
+
+plt.plot(x, fit, color='green', label='Fit mit Sigmoidfunktion', alpha=0.5)
+plt.plot(x2, fit2, color='green', alpha=0.5)
+
+plt.legend(loc='best', fontsize='small')
+
+plt.savefig('delay.pdf')
