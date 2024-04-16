@@ -5,7 +5,7 @@ import uncertainties.unumpy as unp
 from scipy.optimize import curve_fit
 import pandas as pd
 
-delay, counts = np.loadtxt('delay.csv', unpack=True, delimiter=',')
+delay, counts = np.loadtxt('../data/delay.csv', unpack=True, delimiter=',')
 
 counts_err = np.sqrt(counts)
 

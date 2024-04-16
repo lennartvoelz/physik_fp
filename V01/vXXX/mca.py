@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 
-channel, time = np.loadtxt('mca.csv', unpack=True, delimiter=',')
+channel, time = np.loadtxt('../data/mca.csv', unpack=True, delimiter=',')
 
 plt.xlabel('Channel')
 plt.ylabel(r'Zeit [$\mu s$]')
