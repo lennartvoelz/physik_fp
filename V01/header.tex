@@ -4,6 +4,22 @@
   titlepage=firstiscover, % Titelseite ist Deckblatt
 ]{scrartcl}
 
+%meine pakete
+\usepackage{colortbl}
+\usepackage[right]{eurosym}
+\usepackage{verbatim}
+\usepackage{nomencl}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage[format=hang,justification=centering]{caption}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
 % Paket float verbessern
 \usepackage{scrhack}
 
@@ -95,9 +111,6 @@
 ]{caption}
 % subfigure, subtable, subref
 \usepackage{subcaption}
-
-% Grafiken können eingebunden werden
-\usepackage{graphicx}
 
 % schöne Tabellen
 \usepackage{booktabs}
