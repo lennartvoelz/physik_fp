@@ -59,6 +59,6 @@ plt.axvline(x=fwhm_x2, color='green', linestyle='--', alpha=0.7)
 plt.plot(x, fit, color='green', label='Fit mit Sigmoidfunktion', alpha=0.5)
 plt.plot(x2, fit2, color='green', alpha=0.5)
 
-plt.legend(loc='best', fontsize='small')
+plt.legend(loc='best', fontsize='x-small', markerscale=0.5)
 
-plt.savefig('delay.pdf')
+plt.savefig('build/delay.pdf')

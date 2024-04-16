@@ -33,4 +33,4 @@ def converter(channel):
     '''
     return linear_fit(channel, *params)
 
-plt.savefig('mca.pdf')
+plt.savefig('build/mca.pdf')
