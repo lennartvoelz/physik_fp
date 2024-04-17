@@ -83,13 +83,21 @@ welcher als mittlere Lebensdauer $\tau$ identifiziert wird. Es gilt daher
 \end{equation}
 \subsection{Messprozess der kosmischen Myonen}
 \newpage
+
+
 \section{Versuchsaufbau}
-In \autoref{fig:aufb} 
+In \autoref{fig:aufb} ist schematisch der in diesem Versuch verwendete Aufbau zu sehen.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.6\linewidth]{data/aufbau_schem.png}
+    \includegraphics[width=0.5\linewidth]{data/aufbau_schem.png}
     \captionof{figure}{Schematischer Versuchsaufbau \cite{V01}}
     \label{fig:aufb}
 \end{figure}
 \noindent
+Dieser besteht aus einem Szintillator, an welchen zwei gegenüberliegende Photomultiplier angeschlossen sind. Diese werden über eine Hochspannungsquelle betrieben und geben ein 
+elektrisches Signal über jeweils eine variable Verzögerungsleitung in jeweils einen Diskriminator weiter. An den Diskriminatoren lässt sich die Ausgegebene Pulsbreite und die Akzeptanzschwelle des eingehenden Signals einstellen.
+Die vom Diskriminator verarbeiteten Signale laufen in einer Koinzidenzschaltung zusammen, in welcher diese Akzeptiert werden, wenn diese "Gleichzeitig genug" eintreffen. Das Signal aus der Koinzidenzschaltung wird dreifach geteilt, wobei wie in \autoref{fig:aufb} zu sehen zwei der Signale in jeweils 
+ein Und-Gatter gehen und das dritte über eine $\SI{30}{ns}$ Verzögerungsleitung in ein Monoflop. An dem Monoflop lässt sich ein Timer Einstellen, welcher die Suchzeit nach einem Zerfallssignal im Szintillator vorgibt. Das Monoflop Schaltet so nach ablauf der Suchzeit wieder das erste Und-Gatter frei welches in dem folgenden TAC ($\textbf{T}$ime $\textbf{A}$mplitude $\textbf{C}$onverter)
+die Start Signale auslöst. Trifft ein Signal aus der Koinzidenzschaltung während der Suchzeit ein wird das zweite Und-Gatter ausgelöst, welches im TAC ein Stoppsignal auslöst. Das vom TAC gemessene Zeitintervall wird in eine Amplitude umgewandelt und an einen MCA ($\textbf{M}$ulti $\textbf{C}$annel $\textbf{A}$nalyser) weiter gegeben. Dieser Ordnet Die Signalamplituden gebinnten Channeln zu, sodass am PC ein Histogramm gemessen werden kann.
+Zusätzlich messen zwei Impulszähler die Anzahl an Start und Stop Signalen, wobei nur jene Signale bei denen ein Stop im TAC ausgelöst wurde, auch als Datenpunkte im Histogramm zu sehen sind.
 \newpage
