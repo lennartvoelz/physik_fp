@@ -11,15 +11,15 @@ counts_err = np.sqrt(counts)
 
 counts = unp.uarray(counts, counts_err)
 
-hitrate = counts / 100
+messzeit = unc.ufloat(100, 0.1)
+
+hitrate = counts / messzeit
 
 plt.errorbar(delay, unp.nominal_values(hitrate), yerr=unp.std_devs(hitrate), fmt='o', color='red', ecolor='black', linestyle='', linewidth=1.5, markersize=4, label='Messwerte mit Poissonfehler')
 
-plt.xlabel('Delay')
+plt.xlabel('Delay [ns]')
 plt.ylabel('Hitrate')
-plt.title('Hitrate vs. Delay')
 plt.grid(True)
-plt.gca().set_facecolor('#f7f7f7')
 
 selected_hits = hitrate[11:17]
 selected_delays = delay[11:17]
@@ -41,6 +41,11 @@ params2, covariance2 = curve_fit(sigmoid, delay[15:30], unp.nominal_values(hitra
 errors = np.sqrt(np.diag(covariance))
 errors2 = np.sqrt(np.diag(covariance2))
 
+print('Parameter:', params)
+print('Parameter2:', params2)
+print('Fehler:', errors)
+print('Fehler2:', errors2)
+
 x = np.linspace(-16, -6, 1000)
 x2 = np.linspace(1, 12, 1000)
 
@@ -52,6 +57,19 @@ idx2 = (np.abs(fit2 - fwhm_y)).argmin()
 
 fwhm_x = x[idx]
 fwhm_x2 = x2[idx2]
+
+print('FWHM x:', fwhm_x)
+print('FWHM x2:', fwhm_x2)
+
+fwhm_breite = fwhm_x2 - fwhm_x
+
+diskriminator_breite = unc.ufloat(12, 0.5)
+
+aufloesung = np.abs(2*diskriminator_breite - fwhm_breite)
+
+print('Auflösung:', aufloesung)
+print('FWHM Breite:', fwhm_breite)
+print(fwhm_y)
 
 plt.axvline(x=fwhm_x, color='green', linestyle='--', label='FWHM', alpha=0.7)
 plt.axvline(x=fwhm_x2, color='green', linestyle='--', alpha=0.7)
