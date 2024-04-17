@@ -1,29 +1,65 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-Die in \autoref{sec:Auswertung} gezeigten Grafiken und Rechnungen sind mithilfe der Python-Bibliotheken Matplotlib \cite{matplotlib}, Scipy \cite{scipy} und Numpy \cite{numpy}
-erstellt worden.
+Die Grafiken und Berechnungen, die in Abschnitt \autoref{sec:Auswertung} gezeigt werden, wurden unter Verwendung der Python-Bibliotheken Matplotlib \cite{matplotlib}, Scipy \cite{scipy} und Numpy \cite{numpy} erstellt. 
+Zur Berücksichtigung von Unsicherheiten wurde Uncertainties \cite{uncertainties} verwendet.
 
 \subsubsection{}
 %Tabellen nebeneinander
-\begin{table}[H]
-  \centering
-  \caption{}
-  \begin{tabular}{S[table-format=3] S[table-format=2(2)]}
-      \toprule
-      {$t\,/\symup{s}$} & {$N$} \\
-      \midrule
 
-      \bottomrule
-  \end{tabular}
-  \begin{tabular}{S[table-format=3] S[table-format=2(2)]}
-      \toprule
-      {$t\,/\symup{s}$} & {$N$} \\
-      \midrule
-      
-      \bottomrule
-  \end{tabular}
-  \label{tab:}
+\begin{table}[htbp]
+  \centering
+  \caption{Caption for the table}
+  \begin{minipage}[t]{0.45\linewidth}
+    \centering
+    \begin{tabular}{c|c}
+      \hline
+      \textbf{Header 1} & \textbf{Header 2} \\
+      \hline
+      -16 & 19\\
+      -15 & 60\\
+      -14 & 129\\
+      -13 & 254\\
+      -12 & 369\\
+      -11 & 467\\
+      -10 & 529\\
+      -9 & 631\\
+      -8 & 756\\
+      -7 & 850\\
+      -6 & 901\\
+      -5 & 969\\
+      -4 & 968\\
+      -3 & 921\\
+      -2 & 958\\
+      -1 & 933\\
+      \hline
+    \end{tabular}
+  \end{minipage}
+  \begin{minipage}[t]{0.45\linewidth}
+    \centering
+    \begin{tabular}{c|c}
+      \hline
+      \textbf{Header 1} & \textbf{Header 2} \\
+      \hline
+      0 & 918\\
+      1 & 826\\
+      2 & 759\\
+      3 & 584\\
+      4 & 468\\
+      5 & 330\\
+      4 & 468\\
+      5 & 330\\
+      6 & 308\\
+      7 & 244\\
+      8 & 196\\
+      9 & 137\\
+      10 & 73\\
+      11 & 38\\
+      12 & 8\\
+      \hline
+    \end{tabular}
+  \end{minipage}
 \end{table}
+
 %Plots und Bilder
 %\begin{figure}[H]
 %  \includegraphics[width=\linewidth]{plots/.pdf}
