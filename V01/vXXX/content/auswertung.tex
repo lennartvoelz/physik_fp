@@ -180,6 +180,21 @@ angepasst. Die Parameter der linearen Funktion sind $a = \SI{0.021(0.00)}{\micro
 \end{figure}
 
 \subsection{Bestimmung der Lebensdauer der Myonen}
+Die Laufzeit der Messung betrug $T = \SI{170575}{s}$. In dieser Zeit wurden $N_{start} = 1380191$ Start- und $N_{stop} = 3580$ Stoppimpulse gemessen. Die Events werden in 512 Kanäle des MCA aufgeteilt und 
+und werden mithilfe der Kalibrierung des MCAs in eine Zeit umgerechnet. Da es sich bei den Messdaten um Counts handelt, bietet es sich an, die Daten zu binnen. Die Anzahl der Bins wird auf 
+25 gesetzt. Das entspricht einer Bin-Breite von $\SI{0.44}{\micro\s}$.
+Um die Lebensdauer der Myonen zu bestimmen, wird die Anzahl der Counts in Abhängigkeit der Zeit in einem Histogramm dargestellt.
+An das Histogramm wird eine Funktion der Form
+\begin{equation*}
+  f(t) = N_0 \cdot \exp(-\frac{t}{\tau})
+\end{equation*}
+angepasst. Die Parameter der Funktion sind $N_0 = \SI{741.01(55.01)}{}$ und die Lebensdauer $\tau = \SI{1.46(0.16)}{\micro\s}$. Das Histogramm und der Fit sind in \autoref{fig:lebensdauer} dargestellt.
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.95\textwidth]{build/lifespan_hist.pdf}
+  \caption{Histogramm und Fit zur Bestimmung der Lebensdauer von Myonen.}
+  \label{fig:lebensdauer}
+\end{figure}
 
 \newpage
