@@ -18,7 +18,7 @@ Myonen haben Spin $\frac{1}{2}$ und sind daher Fermionen. Sie haben eine negativ
     \mu^- \rightarrow e^- + \bar{\nu}_e + \nu_\mu \, \, .
 \end{equation}
 Kosmische Myonen entstehen in einer Höhe von ca. $\SI{20}{km}$ in sogenannten Luftschauern. Diese finden statt, wenn ein hochenergetisches Teilchen aus dem Kosmos auf die Erdatmosphäre trifft und dort mit den Teilchen der Atmosphäre wechselwirkt.
-Bei nicht zu hohen Energien sind Protonen die häufigsten Primärteilchen. Diese treffen auf die Atmosphäre und zerfallen bei der Wechselwirkung mit den Atomen und Molekülen der Erdatmosphäre in Kaonen und Pionen. Kaonen und Pionen zerfallen weiter in Myonen, wie hier Beispielhaft für $K^-$ und $\pi^-$ in \autoref{eqn:k_pi} zu sehen ist.
+Bei nicht zu hohen Energien sind Protonen die häufigsten Primärteilchen. Diese treffen auf die Atmosphäre und zerfallen bei der Wechselwirkung mit den Atomen und Molekülen der Erdatmosphäre in Kaonen und Pionen. Kaonen und Pionen zerfallen weiter in Myonen, wie hier beispielhaft für $K^-$ und $\pi^-$ in \autoref{eqn:k_pi} zu sehen ist.
 \begin{equation}
     \begin{aligned}
     \label{eqn:k_pi}
@@ -84,8 +84,8 @@ welcher als mittlere Lebensdauer $\tau$ identifiziert wird. Es gilt daher
 \end{equation}
 \newpage
 \subsection{Messprozess der kosmischen Myonen}
-Für die Detektion der Myonen wird in diesem Versuch ein Szintillationsdetektor verwendet. Szintillatoren absorbieren Ionisierende Strahlung wodurch in dem Szintillatormaterial Photonen ausgelöst werden. Diese entstehen entweder durch Ionisation des Szintillatormaterials und anschließender Rekombination, oder 
-durch eine Anregung der Szintillatormoleküle bei deren Abregung ein Photon abgestrahlt wird. Szintillatoren werden allgemein als organische und anorganische Szintillatoren klassifiziert. Organische Szintillatoren sind gut geeignet um Hochfrequente Messungen zu tätigen, da bei diesen die Abstrahlung der Photonen schneller stattfindet als bei anorganischen Szintillatoren. Anorganische kristalline Szintillatoren haben gegenüber organischen Szintillatoren den Vorteil, dass diese Aufgrund ihrer Kristallstruktur und der resultierenden Bandstruktur feste Übergangsenergien besitzen. Aufgrund des daher wohldefinierten Spektrums der Szintillatorphotonen sind bei dieser Art von Szintillator also auch Energiemessungen möglich. 
+Für die Detektion der Myonen wird in diesem Versuch ein Szintillationsdetektor verwendet. Szintillatoren absorbieren ionisierende Strahlung wodurch in dem Szintillatormaterial Photonen ausgelöst werden. Diese entstehen entweder durch Ionisation des Szintillatormaterials und anschließender Rekombination, oder 
+durch eine Anregung der Szintillatormoleküle bei deren Abregung ein Photon abgestrahlt wird. Szintillatoren werden allgemein als organische und anorganische Szintillatoren klassifiziert. Organische Szintillatoren sind gut geeignet um hochfrequente Messungen zu tätigen, da bei diesen die Abstrahlung der Photonen schneller stattfindet als bei anorganischen Szintillatoren. Anorganische kristalline Szintillatoren haben gegenüber organischen Szintillatoren den Vorteil, dass diese Aufgrund ihrer Kristallstruktur und der resultierenden Bandstruktur feste Übergangsenergien besitzen. Aufgrund des daher wohldefinierten Spektrums der Szintillatorphotonen sind bei dieser Art von Szintillator also auch Energiemessungen möglich. 
 
 \begin{figure}[H]
     \centering
@@ -99,6 +99,7 @@ Photoeffekt statt, wodurch ein Elektron aus dem Kathodenmaterial gelöst wird. D
 \newpage
 
 \section{Versuchsaufbau}
+\label{sec:aufbau}
 In \autoref{fig:aufb} ist schematisch der in diesem Versuch verwendete Aufbau zu sehen.
 \begin{figure}[H]
     \centering
@@ -108,9 +109,9 @@ In \autoref{fig:aufb} ist schematisch der in diesem Versuch verwendete Aufbau zu
 \end{figure}
 \noindent
 Dieser besteht aus einem Szintillator, an welchen zwei gegenüberliegende Photomultiplier angeschlossen sind. Diese werden über eine Hochspannungsquelle betrieben und geben ein 
-elektrisches Signal über jeweils eine variable Verzögerungsleitung in jeweils einen Diskriminator weiter. An den Diskriminatoren lässt sich die Ausgegebene Pulsbreite und die Akzeptanzschwelle des eingehenden Signals einstellen.
-Die vom Diskriminator verarbeiteten Signale laufen in einer Koinzidenzschaltung zusammen, in welcher die Signale Akzeptiert werden, die „gleichzeitig“ eintreffen. So kann statistisch Verteiltes thermisches Rauschen der Photomultiplier zu großen Teilen aus dem Signal gefiltert werden. Das Signal aus der Koinzidenzschaltung wird dreifach geteilt, wobei wie in \autoref{fig:aufb} zu sehen zwei der Signale in jeweils 
-ein Und-Gatter gehen und das Dritte über eine $\SI{30}{ns}$ Verzögerungsleitung in ein Monoflop. An dem Monoflop lässt sich ein Timer Einstellen, welcher die Suchzeit nach einem Zerfallssignal im Szintillator vorgibt. Das Monoflop Schaltet so nach ablauf der Suchzeit wieder das erste Und-Gatter frei welches in dem folgenden TAC ($\textbf{T}$ime $\textbf{A}$mplitude $\textbf{C}$onverter)
-die Start Signale auslöst. Trifft ein Signal aus der Koinzidenzschaltung während der Suchzeit ein wird das zweite Und-Gatter ausgelöst, welches im TAC ein Stoppsignal auslöst. Das vom TAC gemessene Zeitintervall wird in eine Amplitude umgewandelt und an einen MCA ($\textbf{M}$ulti $\textbf{C}$annel $\textbf{A}$nalyser) weitergegeben. Dieser Ordnet Die Signalamplituden gebinnten Channeln zu, sodass am PC ein Histogramm gemessen werden kann.
+elektrisches Signal über jeweils eine variable Verzögerungsleitung in jeweils einen Diskriminator weiter. An den Diskriminatoren lässt sich die ausgegebene Pulsbreite und die Akzeptanzschwelle des eingehenden Signals einstellen.
+Die vom Diskriminator verarbeiteten Signale laufen in einer Koinzidenzschaltung zusammen, in welcher die Signale akzeptiert werden, die „gleichzeitig“ eintreffen. So kann statistisch verteiltes thermisches Rauschen der Photomultiplier zu großen Teilen aus dem Signal gefiltert werden. Das Signal aus der Koinzidenzschaltung wird dreifach geteilt, wobei wie in \autoref{fig:aufb} zu sehen zwei der Signale in jeweils 
+ein Und-Gatter gehen und das Dritte über eine $\SI{30}{ns}$ Verzögerungsleitung in ein Monoflop. An dem Monoflop lässt sich ein Timer einstellen, welcher die Suchzeit nach einem Zerfallssignal im Szintillator vorgibt. Das Monoflop schaltet so nach Ablauf der Suchzeit wieder das erste Und-Gatter frei welches in dem folgenden TAC ($\textbf{T}$ime $\textbf{A}$mplitude $\textbf{C}$onverter)
+die Startsignale auslöst. Trifft ein Signal aus der Koinzidenzschaltung während der Suchzeit ein, wird das zweite Und-Gatter ausgelöst, welches im TAC ein Stoppsignal auslöst. Das vom TAC gemessene Zeitintervall wird in eine Amplitude umgewandelt und an einen MCA ($\textbf{M}$ulti $\textbf{C}$annel $\textbf{A}$nalyser) weitergegeben. Dieser ordnet die Signalamplituden gebinnten Channeln zu, sodass am PC ein Histogramm gemessen werden kann.
 Zusätzlich messen zwei Impulszähler die Anzahl an Start und Stop Signalen, wobei nur jene Signale bei denen ein Stop im TAC ausgelöst wurde, auch als Datenpunkte im Histogramm zu sehen sind.
 \newpage
