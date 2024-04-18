@@ -32,11 +32,11 @@ print('Mittelwert des Plateaus:', mean)
 
 fwhm_y = mean / 2
 
-def sigmoid(x, a, b, c, d):
-    return a / (1 + np.exp(-b*(x-c))) + d
+def sigmoid(x, a, b, c):
+    return a / (1 + np.exp(-b*(x))) + c
 
-params, covariance = curve_fit(sigmoid, delay[0:11], unp.nominal_values(hitrate[0:11]), p0=[0.5, 0.1, 10, 0.5], sigma=unp.std_devs(hitrate[0:11]))
-params2, covariance2 = curve_fit(sigmoid, delay[15:30], unp.nominal_values(hitrate[15:30]), p0=[60, -0.16, 10, -2],sigma=unp.std_devs(hitrate[15:30]))
+params, covariance = curve_fit(sigmoid, delay[0:11], unp.nominal_values(hitrate[0:11]), p0=[0.5, 0.1, 10], sigma=unp.std_devs(hitrate[0:11]))
+params2, covariance2 = curve_fit(sigmoid, delay[15:30], unp.nominal_values(hitrate[15:30]), p0=[60, -0.16, 10],sigma=unp.std_devs(hitrate[15:30]))
 
 errors = np.sqrt(np.diag(covariance))
 errors2 = np.sqrt(np.diag(covariance2))

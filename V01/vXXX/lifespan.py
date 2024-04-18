@@ -19,19 +19,22 @@ counts_err = np.sqrt(counts)
 plt.clf()
 plt.bar(bin_edges[:-1], counts, align="center", yerr=counts_err, capsize=3, ecolor='black', label="Messwerte", edgecolor='black', linewidth=0.7, width=0.44)
 
-def fit_func(x, a, b, c, d):
-    return a*np.exp(-b*(x-c))+d
+def fit_func(x, a, b):
+    return a*np.exp(-b*(x))
 
-popt, pcov = curve_fit(fit_func, bin_edges[:-1], counts, p0=[1200, 0.1, 0.1, 0.1])
+popt, pcov = curve_fit(fit_func, bin_edges[:-1], counts, p0=[1200, 0.1])
 
 errors = np.sqrt(np.diag(pcov))
 
 x = np.linspace(np.min(time), np.max(time), 1000)
 
 plt.plot(x, fit_func(x, *popt), label="Fit", color='red')
+plt.xlabel(r'Zeit [$\mu s$]')
+plt.ylabel('Counts')
+plt.legend(loc='best')
 
 plt.savefig("build/lifespan_hist.pdf")
 
-print("a = ", popt[0], ", b = ", popt[1], ", c = ", popt[2], ", d = ", popt[3])
+print("a = ", popt[0], ", b = ", popt[1])
 print("errors: ", errors)
 
