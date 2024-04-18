@@ -110,7 +110,7 @@ von $\SI{12(0.5)}{ns}$ eingestellt wurde, ergibt sich die Auflösungszeit zu
 Da es sich bei der Zählrate um eine Poisson-verteilte Größe handelt, kann damit auch der Untergrund abgeschätzt werden. 
 Für die Zählrate gilt
 \begin{equation*}
-  Z = \frac{N_{start}}{T{ges}}.
+  Z = \frac{N_{start}}{T{ges}} = \frac{1380191}{\SI{170575}{\s}} = \SI{8.0914}{\per\s}.
 \end{equation*}
 Dabei ist $N_{start}$ die Anzahl der Startimpulse und $T_{ges}$ die gesamte Messzeit. Für die Poisson-Verteilung gilt dann 
 \begin{equation*}
@@ -118,14 +118,18 @@ Dabei ist $N_{start}$ die Anzahl der Startimpulse und $T_{ges}$ die gesamte Mess
 \end{equation*}
 Die Wahrscheinlichkeit, dass ein weiterer Impuls nach einer Zeit $t$ auftritt, ist dann
 \begin{equation*}
-  P(1) = 
+  P(1) = 0.00008
 \end{equation*}
 
 Die Untergrundzahl lässt sich also zu
 \begin{equation*}
-  N_{Untergrund} = N_{start} \cdot P(1)
+  N_{Untergrund} = N_{start} \cdot P(1) = 1380191 \cdot 0.00008 = 110.4
 \end{equation*}
-abschätzen.
+abschätzen. Diese Ereignisse verteilen sich gleichmäßig auf die 512 Kanäle des MCA, sodass der Untergrund pro Kanal
+\begin{equation*}
+  U = \frac{N_{Untergrund}}{512} = 0.22
+\end{equation*}
+beträgt.
 
 \subsection{Kalibrierung des Multichannelanalyzers}
 
@@ -166,7 +170,7 @@ Die Messwerte aus \autoref{tab:mca} werden nun in \autoref{fig:mca} dargestellt.
 \begin{equation*}
   f(x) = a \cdot x + b
 \end{equation*}
-angepasst. Die Parameter der linearen Funktion sind $a = \SI{0.021(0.00)}{}$ und $b = \SI{0.15(0.00)}{}$.
+angepasst. Die Parameter der linearen Funktion sind $a = \SI{0.021(0.00)}{\micro\s}$ und $b = \SI{0.15(0.00)}{\micro\s}$.
 
 \begin{figure}[H]
   \centering
@@ -175,12 +179,7 @@ angepasst. Die Parameter der linearen Funktion sind $a = \SI{0.021(0.00)}{}$ und
   \label{fig:mca}
 \end{figure}
 
+\subsection{Bestimmung der Lebensdauer der Myonen}
 
-%Plots und Bilder
-%\begin{figure}[H]
-%  \includegraphics[width=\linewidth]{plots/.pdf}
-%  \caption{}
-%  \label{fig:}
-%\end{figure}
 
 \newpage
