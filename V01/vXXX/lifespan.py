@@ -15,6 +15,10 @@ num_bins = 25
 
 counts, bin_edges = np.histogram(time, bins=num_bins, weights=counts)
 
+counts -= 4
+
+counts = np.abs(counts)
+
 counts_err = np.sqrt(counts)
 
 plt.clf()
