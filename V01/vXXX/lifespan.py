@@ -29,7 +29,9 @@ errors = np.sqrt(np.diag(pcov))
 
 x = np.linspace(np.min(time), np.max(time), 1000)
 
+
 plt.plot(x, fit_func(x, *popt), label="Fit", color='red')
+plt.plot(x, fit_func(x, counts[1], 2.197083), label = 'Theorie Kurve', color = 'orange')
 plt.xlabel(r'Zeit [$\mu s$]')
 plt.ylabel('Counts')
 plt.legend(loc='best')

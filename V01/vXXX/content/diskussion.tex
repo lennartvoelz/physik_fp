@@ -9,15 +9,23 @@ berechnet.
 %Tabelle
 \begin{table}[H]
     \centering
-    \caption{Experimentell bestimmte Halbwärtszeit $T_{exp}$, Theoriewert $T_{theo}$ und Abweichung in \%.}
+    \caption{Experimentell bestimmte mittlere Lebensdauer $\tau_{exp}$, Präzisionsmessung $\tau_{prec}$ und Abweichung in \%.}
     \begin{tabular}{c c c}
         \toprule
-        {$T_{exp}\,/\symup{s}$} & {$T_{theo}\,/\symup{s}$} & {$\Delta\,/\symup{\%}$}\\
+        {$\tau_{exp}\,/\symup{\mu s}$} & {$\tau_{prec}\,/\symup{\mu s}$ \cite{pdg}} & {$\Delta\,/\symup{\%}$}\\
         \midrule
-        
+        $1.46 \pm 0.16$ & $2.197083 \pm 0.000032$ & $34 \pm 7$ \\
         \bottomrule
     \end{tabular}
     \label{tab:Diskussion}
 \end{table}
+Auffällig an den Ergebnissen in \autoref{tab:Diskussion} ist die hohe Diskrepanz der gemessenen mittleren Lebensdauer zu der Präzisionsmessung der mittleren Lebensdauer der Myonen, welche sich in einer $34$ prozentualen Abweichung äußert.
+Diese Abweichung deutet auf einen systematischen Fehler hin, welcher auch in \autoref{fig:lebensdauer} zu sehen ist. Bei einem Vergleich der Theoriekurve, bei welcher $N_0$ als die Anzahl an Counts im 2. Bin gewählt wurde und $\tau_\mu$ auf den Hochpräzisionsmessungswert gesetzt wurde, mit der gefitteten Kurve ist deutlich zu erkennen, dass der Fit deutlich steiler abfällt als von der Theorie vorher gesagt.
+Bei deutlich niedrigeren ersten beiden Bins der gemessenen Verteilung wäre keine niedrigere mittlere Lebensdauer als Fitparameter notwendig, um den vermeintlich stärkeren Abfall des Histogramms zu fitten. Es ist daher von einem Bias hin zu niedrigen Zerfallszeiten in der Messung, oder von einer Unterempfindlichkeit der Apparatur hin zu höheren Zerfallszeiten auszugehen. Ursache des systematischen Fehlers können dabei vielseitig sein. In der Durchführung des Versuches wurden defekte Bauteile verwendet, wie zum Beispiel einer der Diskriminatoren, welcher die Breite des ausgegebenen Signals nicht variieren konnte. Aufgrund des Mangels an Kabeln wurde auch ein Defekt geglaubtes Kabel als Verbindung des TAC mit dem MCA verbaut.
+Für einen Bias hin zu niedrigen Lebensdauern in der Messung spricht auch die Rate der Start und Stop Ereignisse. Diese Beträgt mit
+\begin{equation}
+    \frac{N_{start}}{N_{stop}} \approx 386 \, \, ,
+\end{equation}
+was deutlich unter den erwarteten 1000 Startereignissen pro Stopereignissen liegt. Es ist daher davon auszugehen, dass an einem Punkt in der Apparatur ein Bauteil Fehlereignisse ausgelöst hat, welche im TAC als kurzes Zeitintervall erkannt wurden und so ein zusätzliches Rauschen im Bereich besonders kurzer Lebensdauern bedingt haben. Genau ist es aber nicht möglich die Fehlerursache zu benennen ohne weitere Messungen an der verwendeten Apparatu vorzunehmen. Aufgrund dieser "Ausreißer" in den besonders niedrigen Channeln wurde sich auch für ein Binning der Daten entschieden, was den systematischen Fehler nicht behebt, allerdings abschwächt.
 
 \newpage
