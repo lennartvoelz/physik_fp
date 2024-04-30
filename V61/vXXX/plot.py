@@ -77,7 +77,7 @@ def TEM_00(x, I_0, x_1, w):
     return I_0 * np.exp(-2 * (x-x_1)**2 / w**2)
 run_01 = np.linspace(-10, 10, 1000)
 def TEM_01(x, I_0,x_0, x_1, w):
-    return I_0 * (2 * (x-x_0) / w)**2 * np.exp(-2 * (x-x_1)**2 / w**2)
+    return I_0 * ((x-x_0) / w)**2 * np.exp(-2 * (x-x_1)**2 / w**2)
 
 #TEM00 plotting + fitting
 dist_00 = np.arange(-8, 9, 1)
@@ -94,6 +94,7 @@ fig.grid()
 ax.legend()
 ax.savefig('plots/TEM_00.pdf')
 
+print(f'Für den Fit der TEM00 Funktion ergibt sich I_0 = {p_opt[0]} +- {cov[0][0]}, x_1 = {p_opt[1]} +- {cov[1][1]} und w = {p_opt[2]} +- {cov[2][2]}')
 #TEM01 plotting + fitting
 
 P_01 = np.loadtxt('TEM_01.txt', unpack = True)
@@ -109,7 +110,6 @@ ax.legend()
 ax.savefig('plots/TEM_01.pdf')
 
 #print params of TEM_00 and TEM_01 with descriptions
-print(f'Für den Fit der TEM00 Funktion ergibt sich I_0 = {p_opt[0]} +- {cov[0][0]}, x_1 = {p_opt[1]} +- {cov[1][1]} und w = {p_opt[2]} +- {cov[2][2]}')
 print(f'Für den Fit der TEM01 Funktion ergibt sich I_0 = {p_opt[0]} +- {cov[0][0]}, x_0 = {p_opt[1]} +- {cov[1][1]}, x_1 = {p_opt[2]} +- {cov[2][2]} und w = {p_opt[3]} +- {cov[3][3]}')
 
 #longitudinal modes
