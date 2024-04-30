@@ -1,9 +1,48 @@
 \section{Zielsetzung}
 \label{sec:Zielsetzung}
+Ziel ist es die Funktionsweise eines Helium-Neon-Lasers zu verstehen. Der Laser wird dazu aufgebaut und hinsichtlich seiner Eigenschaften, wie Wellenlänge, Intensitätsverteilung
+senkrecht zur Ausbreitungsrichtung, Polarisation und Modenstruktur, untersucht.
 
 \section{Theorie}
 \label{sec:Theorie}
+Ein Laser (Light Amplification by Stimulated Emission of Radiation) erzeugt kohärentes, nahezu monochromatisches und gerichtetes Licht. Es gibt verschiedene Wege einen Laser
+zu realisieren, der hier verwendete Helium-Neon-Laser gehört zu den Gaslasern.\\
+Ein solcher Laser lässt sich grundlegend in drei Teile unterteilen: ein aktives Medium, eine Pumpquelle und einen Resonator.\\
+\\
+Das aktive Medium ist in diesem Versuch ein Gasgemisch aus Helium und Neon. Diese Wahl ist begründet durch die Tatsache, dass Helium und Neon angeregte Niveaus besitzen, die
+nahe beieinander liegen. So kann das Helium durch die Pumpquelle angeregt werden und die Energie auf das Neon übertragen. Der Energiezustand der übertragenen Energie ist jedoch
+nicht das niedrigste angeregte Niveau, sondern ein metastabiler Zustand, wodurch eine Besetzungsinversion länger erhalten bleibt. Der Übergang in diesen metastabilen Zustand
+sorgt für die Emission des charakteristischen roten Lichts. Dieser Prozess geschieht entweder spontan oder durch stimulierte Emission. Bei der spontanen Emission wird ein Photon
+emittiert, wenn ein Elektron von einem angeregten Zustand in den Grundzustand zurückfällt. Bei der stimulierte Emission wird ein Photon emittiert, wenn ein einfallendes Photon
+das Elektron von einem angeregten Zustand in den Grundzustand zurückfallen lässt. Dieses emittierte Photon hat dabei die gleiche Energie, Phase und Ausbreitungsrichtung wie das
+einfallende Photon.\\
+\\
+Die Pumpen ist in diesem Versuch ein elektrischer Entladungsprozess. Dabei wird das Helium durch eine angelegte Spannung ionisiert und in einen angeregten Zustand versetzt.
+Durch die Energiepumpe wird im Lasermedium eine vom thermischen Gleichgewicht abweichende Besetzung eines Niveaus erzeugt. Mit ausreichender Pumpenergie kann so eine Besetzungsinversion (angeregter Zustand höhere Besetzungszahl als Grundzustand) erreicht werden.\\
+\\
+Der Resonator besteht aus zwei Spiegeln, von denen einer teilweise durchlässig ist. Senkrecht auf die Spiegel treffende Photonen verbleiben im Resonator und sorgen für 
+eine Verstärkung des Lichts durch stimulierte Emission. Diese Verstärkung ist dabei umso größer, je länger die Verweildauer des Photons im Resonator ist. Die Verweildauer ist
+Die Verweildauer ist dabei abhängig von der Länge des Resonators und der Reflektivität der Spiegel. Dadurch, dass ein offener Resonator verwendet wird, entsteht gerichtetes Licht, das durch den
+teilweise durchlässigen Spiegel austritt.\\
+\\
+Grundsätzlich müssen nun einige Bedingungen erfüllt sein, damit ein Laserbetrieb möglich ist. Zum einen muss die Verstärkung größer sein als die Verluste im Resonator. Verluste entstehen
+zum Beispiel durch Absorption oder Streuung. Eine Verstärkung (erst unabhängig von Verlusten) ist gegeben, wenn der frequenzabhängige Absorptionskoeffizient $\alpha(\nu)$ negativ ist.
+Für die Intensität entlang der Ausbreitungsrichtung $I(z)$ gilt dann:
+\begin{equation*}
+    I(z) = I_0 \exp\left(-\alpha(\nu)z\right).
+\end{equation*}
+Dadurch ergibt sich für die Verstärkung:
+\begin{equation*}
+    g(\nu) = \frac{I(z)}{I_0} = \exp\left(-\alpha(\nu)z\right).
+\end{equation*}
+Verluste im Resonator lassen sich mit dem Faktor $\exp(-\gamma)$ beschreiben. Für Hin- und Rückweg im Resonator der Länge $L$ gilt dann für die Verstärkung:
+\begin{equation*}
+    G = \exp(-2\alpha L - 2\gamma).
+\end{equation*}
+Die Bedingung für Laserbetrieb ist dann:
+\begin{equation*}
+    G > 1.
+\end{equation*}
 
-\cite{sample}
 
 \newpage
