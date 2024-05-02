@@ -39,12 +39,13 @@ Für die Verwendeten Resonatoren, aus Konvex Konvex und Plan Konvex Spiegelaufba
   \left(g_1 \cdot g_2\right)_{\text{PK}} &= 1 \cdot \left( 1 - \frac{L}{1400} \right) \, .
 \end{align}
 Diese Erfüllen die Stabilitätsbedingung für $0 \leq L \leq 2800 \, \, \mathrm{mm}$ für den Bikonvexen Resonator und $0 \leq L \leq 1400 \, \, \mathrm{mm}$ für den Plan Konvexen Resonator.
-\\
-\\
-evtl theorie plot 
-\\
-\\
-In Abbildung (ref) sind dabei die theoretischen Plots der Stabilitätsbedingung mit Eingezeichneten Grenzen zu sehen. 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\linewidth]{plots/stab_theo.pdf}
+  \caption{}
+  \label{fig:6}
+\end{figure}
+In \autoref{fig:6} sind dabei die theoretischen Plots der Stabilitätsbedingung mit eingezeichneten Stabilitätsgrenzen zu sehen. 
 \begin{table}[H]
   \centering
   \caption{Messwerte der LASER Leistung als Funktion der Resonatorlänge, KK Links und PK Rechts}
@@ -396,9 +397,18 @@ gefittet. Dabei sind die Parameter $x_0$ und $x_1$ nicht Teil der Theorie, jedoc
         \label{fig:5}
     \end{minipage}
 \end{figure}
+\noindent
 In \autoref{fig:4} und \autoref{fig:5} sind die aufgetragenen Daten und zugehörigen Fits der beiden vermessenen $TEM$ Moden zu sehen. Die Parameter des $TEM_{00}$ Fits ergeben sich dabei auf 
 \begin{align}
   I_0 &= 0.095 \pm 0.00 \, \, \mathrm{mW} \\
   x_1 &= -0.0322 \pm 0.0002 \, \, \mathrm{mm} \\
-  \omega &= 4.3711 \pm 0.0009 \, \, \mathrm{mm} \\
+  \omega &= 4.3711 \pm 0.0009 \, \, \mathrm{mm} 
 \end{align}
+und die Parameter der $\text{TEM}_{01}$ Mode auf 
+\begin{align}
+  I_0 &= 0.11 \pm 0.00 \, \, \mathrm{mW} \\
+  x_0 &= -0.139 \pm 0.005 \, \, \mathrm{mm} \\
+  x_1 &= -0.178 \pm 0.005 \, \, \mathrm{mm} \\
+  \omega &= 4.068 \pm 0.008 \, \, \mathrm{mm} 
+\end{align}
+wobei die identischen Parameter zwischen den Moden nur kleine Abweichungen voneinander aufweisen.

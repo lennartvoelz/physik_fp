@@ -147,6 +147,28 @@ fig.grid()
 fig.legend(loc='upper left')
 ax.savefig('plots/long_mode.pdf')
 
+#theorie plots stabilitätsbedingung
+def stab_1(L):
+    return (1- L/1400)**2
+
+def stab_2(L):
+    return (1- L/1400)
+
+x_run = np.linspace(0, 2850, 10000)
+
+ax, fig = plt.subplots(constrained_layout = True)
+fig.plot(x_run, stab_1(x_run), color='red', label='Stabilitätbedingung Bikonkaver Resonator')
+fig.plot(x_run, stab_2(x_run), color='blue', label='Stabilitätsbedingung Plan-Konkaver Resonator')
+#mark borders of stability zones for both resonators on the x axis with a vertical line
+fig.axvline(x=1400, color='blue', linestyle='--', label = 'Stabilitätsgrenze Bikonkaver Resonator')
+fig.axvline(x=2800, color='red', linestyle='--' , label = 'Stabilitätsgrenze Plan-Konkaver Resonator')
+fig.fill_between(x_run, 0, 1, color='green', alpha=0.4, label='Stabilitätsbereich')
+fig.set_xlabel(r'Resonatorlänge $L$ / $\mathrm{mm}$')
+fig.set_ylabel(r'Stabilitätsparameter $g_1 \cdot g_2$')
+fig.set_ylim(-0.6, 1.2)
+fig.grid()
+fig.legend(loc = 'lower left')
+ax.savefig('plots/stab_theo.pdf')
 
 
 
