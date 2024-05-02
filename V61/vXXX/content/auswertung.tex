@@ -1,28 +1,29 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 Die in \autoref{sec:Auswertung} gezeigten Grafiken und Rechnungen sind mithilfe der Python-Bibliotheken Matplotlib \cite{matplotlib}, Scipy \cite{scipy} und Numpy \cite{numpy}
-erstellt worden.
+erstellt worden. Die Fehlerrechnung wird mit der Python-Bibliothek Uncertainties \cite{uncertainties} durchgeführt.
 
 
 \subsection{Überprüfung der Stabilitätsbedingung}
 \label{sec:a1}
-Die Stabilitätsbedingung, Gleichung \autoref{eqn:stab}, beschreibt den Bereich der Resonatorlänge des HeNe LASERs, in dem der LASER Strahl nicht divergiert. 
-Für die Verwendeten Resonatoren, aus Konkav Konkav und Plan Konkav Spiegelaufbauten ergeben sich mit einem Krümmungsradius von $r = \SI{1400}{mm}$ für die konkaven Spiegel die Stabilitätsgleichungen
+Die Stabilitätsbedingung, Gleichung \autoref{eqn:stab}, beschreibt den Bereich der Resonatorlänge des HeNe-LASERs, in dem der LASER-Strahl nicht divergiert.
+Für die verwendeten Resonatoren aus Konkav-Konkav- und Plan-Konkav-Spiegelaufbauten ergeben sich mit einem Krümmungsradius von $r = \SI{1400}{mm}$ für die konkaven Spiegel die Stabilitätsgleichungen.
 \begin{align}
   \left(g_1 \cdot g_2\right)_{\text{KK}} &= \left( 1 - \frac{L}{1400} \right)^2 \\
   \left(g_1 \cdot g_2\right)_{\text{PK}} &= 1 \cdot \left( 1 - \frac{L}{1400} \right) \, .
 \end{align}
-Diese Erfüllen die Stabilitätsbedingung für $0 \leq L \leq 2800 \, \, \mathrm{mm}$ für den bikonkaven Resonator und $0 \leq L \leq 1400 \, \, \mathrm{mm}$ für den Plan Konkaven Resonator.
+Diese erfüllen die Stabilitätsbedingungen für $0 \leq L \leq 2800 \, \, \mathrm{mm}$ für den bikonkaven Resonator und $0 \leq L \leq 1400 \, \, \mathrm{mm}$ für den Plan Konkaven Resonator.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\linewidth]{plots/stab_theo.pdf}
-  \caption{}
+  \includegraphics[width=0.7\linewidth]{plots/stab_theo.pdf}
+  \caption{Theoretische Stabilitätsparameter für die verwendeten Resonatoren.}
   \label{fig:6}
 \end{figure}
-In \autoref{fig:6} sind dabei die theoretischen Plots der Stabilitätsbedingung mit eingezeichneten Stabilitätsgrenzen zu sehen. 
+\noindent
+In \autoref{fig:6} sind dabei die theoretischen Plots der Stabilitätsbedingung mit eingezeichneten Stabilitätsgrenzen zu sehen.
 \begin{table}[H]
   \centering
-  \caption{Messwerte der LASER Leistung als Funktion der Resonatorlänge, KK Links und PK Rechts}
+  \caption{Messwerte der LASER Leistung als Funktion der Resonatorlänge, K-K Links und P-K Rechts.}
   \begin{tabular}{S[table-format=3] S[table-format=2(2)]}
       \toprule
       {$L$ / $\mathrm{cm}$} & {$P$ / $\mathrm{mW}$} \\
@@ -72,21 +73,21 @@ In \autoref{fig:6} sind dabei die theoretischen Plots der Stabilitätsbedingung 
   \label{tab:1}
 \end{table}
 \noindent
-In \autoref{tab:1} sind die Daten der Messreihe zur Verifizierung der Stabilitätsbedingung zu sehen. In diesen ist zu erkennen, dass der Bikonkave Resonator auch bei Resonatorlängen über $\SI{1400}{mm}$ stabil Funktioniert und der plan konkave Resonator in ebenfalls in dem vorhergesagten Bereich funktioniert. 
+In \autoref{tab:1} sind die Daten der Messreihe zur Verifizierung der Stabilitätsbedingung zu sehen. In diesen ist zu erkennen, dass der bikonkave Resonator auch bei Resonatorlängen über $\SI{1400}{mm}$ stabil funktioniert und der plankonkave Resonator ebenfalls in dem vorhergesagten Bereich funktioniert.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.55\linewidth]{plots/stab_bed_1.pdf}
+  \includegraphics[width=0.65\linewidth]{plots/stab_bed_1.pdf}
   \caption{Leistung des LASERs als Funktion der Resonatorlänge}
   \label{fig:1}
 \end{figure}
 \noindent
-Die Leistung des LASERs ist dabei unabhängig von der Länge des Resonators wie in \autoref{fig:1} gut zu erkennen ist.
+Die Leistung des LASERs ist dabei unabhängig von der Länge des Resonators, wie in \autoref{fig:1} gut zu erkennen ist.
 \newpage
 \subsection{Messung der Wellenlänge des LASERs}
 Für die Bestimmung der Wellenlänge wurden für vier verschiedene Gitter die Abstände der Beugungsmaxima vom Hauptmaximum gemessen, wie in \autoref{tab:3} zu sehen ist.
 \begin{table}[H]
   \centering
-  \caption{Abstände der Beugungsmaxima bei Gittern mit $g_1 = \SI{100}{\milli\meter}^{-1}$, $g_2 = \SI{80}{\milli\meter}^{-1}$, $g_3 = \SI{600}{\milli\meter}^{-1}$, $g_4 = \SI{1200}{\milli\meter}^{-1}$ (von links nach rechts)}
+  \caption{Abstände der Beugungsmaxima bei Gittern mit $g_1 = \SI{100}{\milli\meter}^{-1}$, $g_2 = \SI{80}{\milli\meter}^{-1}$, $g_3 = \SI{600}{\milli\meter}^{-1}$, $g_4 = \SI{1200}{\milli\meter}^{-1}$ (von links nach rechts).}
   \begin{tabular}{S[table-format=3] S[table-format=2(2)]}
       \toprule
       {$d_l$ / $\mathrm{cm}$} & {$d_r$ / $\mathrm{cm}$} \\
@@ -99,7 +100,7 @@ Für die Bestimmung der Wellenlänge wurden für vier verschiedene Gitter die Ab
       25.8 & 23.4 \\
       31.5 & 27.9 \\
       37.9 & 32.7 \\
-      / & /\\
+      \\
       \bottomrule
   \end{tabular}
   \begin{tabular}{S[table-format=3] S[table-format=2(2)]}
@@ -123,13 +124,13 @@ Für die Bestimmung der Wellenlänge wurden für vier verschiedene Gitter die Ab
     \midrule
     12.4 & 12.2 \\
     36.1 & 34.1 \\
-    / & / \\
-    / & / \\
-    / & / \\
-    / & / \\
-    / & / \\
-    / & / \\
-    / & / \\
+    \\
+    \\
+    \\
+    \\
+    \\
+    \\
+    \\
     \bottomrule
   \end{tabular}
   \begin{tabular}{S[table-format=3] S[table-format=2(2)]}
@@ -137,35 +138,35 @@ Für die Bestimmung der Wellenlänge wurden für vier verschiedene Gitter die Ab
     {$d_l$ / $\mathrm{cm}$} & {$d_r$ / $\mathrm{cm}$} \\
     \midrule
     35.2 & 33.4 \\
-    / & / \\
-    / & / \\
-    / & / \\
-    / & / \\
-    / & / \\
-    / & / \\
-    / & / \\
-    / & / \\
+    \\
+    \\
+    \\
+    \\
+    \\
+    \\
+    \\
+    \\
     \bottomrule
   \end{tabular}
   \label{tab:3}
 \end{table}
 \noindent
-Die Werte werden für jedes Gitter für jeweils jede Beugungsordnung links und rechts gemittelt und der Standardfehler des Mittelwerts gebildet um für die Schiefe des Schirmes und Gitters zu der Strahlachse zu korrigieren.
-Für jedes der Gitter wird dann in jeder Beugungsordnung nach \autoref{eqn:wel} die Wellenlänge berechnet und für jedes Gitter gemittelt. Es ergeben sich so für die gemessenen Wellenlänge für jedes Gitter
+Die Werte werden für jedes Gitter für jeweils jede Beugungsordnung links und rechts gemittelt und der Standardfehler des Mittelwerts gebildet, um für die Schiefe des Schirmes und des Gitters zur Strahlachse zu korrigieren.
+Für jedes der Gitter wird dann in jeder Beugungsordnung nach \autoref{eqn:wel} die Wellenlänge berechnet und für jedes Gitter gemittelt. Es ergeben sich so für die gemessenen Wellenlängen für jedes Gitter auf
 \begin{align}
   \label{eqn:2}
-  \lambda_1 &= 641 \pm 11 \, \, \mathrm{nm}  \\
-  \lambda_2 &= 640 \pm 10 \, \, \mathrm{nm} \\
-  \lambda_3 &= 633 \pm 8 \, \, \mathrm{nm} \\
-  \lambda_4 &= 627 \pm 11 \, \, \mathrm{nm}
-\end{align}
-wobei die Reihenfolge der Gitter in der Wellenlängen Angabe in \autoref{eqn:2} identisch zu der in \autoref{tab:3} ist.
+  \lambda_1 &= 641 \pm 11 \, \, \mathrm{nm} \, ,  \\
+  \lambda_2 &= 640 \pm 10 \, \, \mathrm{nm} \, ,\\
+  \lambda_3 &= 633 \pm 8 \, \, \mathrm{nm}  \, , \\
+  \lambda_4 &= 627 \pm 11 \, \, \mathrm{nm} \, . \\
+\end{align} 
+Dabei ist die Reihenfolge der Gitter in der Wellenlängen Angabe in \autoref{eqn:2} identisch zu der in \autoref{tab:3} ist.
 \newpage
 \subsection{Messung der Polarisationsrichtung des LASERs}
 In \autoref{tab:2} sind die Messwerte der Messreihe für die Bestimmung der Polarisationsrichtung des LASERs zu sehen.
 \begin{table}[H]
   \centering
-  \caption{Messwerte der Leistung des LASERs als Funktion des Polarisationswinkels}
+  \caption{Messwerte der Leistung des LASERs als Funktion des Polarisationswinkels.}
   \begin{tabular}{S[table-format=3] S[table-format=2(2)]}
       \toprule
       {Winkel $\Phi$ / $^\circ$} & {$P$ / $\mathrm{mW}$} \\
@@ -216,8 +217,8 @@ In \autoref{tab:2} sind die Messwerte der Messreihe für die Bestimmung der Pola
   \end{tabular}
   \label{tab:2}
 \end{table}
-\noindent 
-Diese sind nach Gleichung (ref) proportional zu $\text{cos}^2\left(\Phi\right)$, wobei die Funktion maximal wird wenn der Polarisationswinkel $\Phi_0$ erreicht ist. Dies ist durch eine Phasenverschiebung um diesen Winkel erreichbar, weswegen eine Funktion der Form 
+\noindent
+Diese sind nach Gleichung (ref) proportional zu $\text{cos}^2\left(\Phi\right)$, wobei die Funktion maximal wird, wenn der Polarisationswinkel $\Phi_0$ erreicht ist. Dies ist durch eine Phasenverschiebung um diesen Winkel erreichbar, weswegen eine Funktion der Form
 \begin{equation}
   \label{eqn:1}
   P\left(\Phi\right) = I_0 \cdot \text{cos}^2\left(\Phi - \Phi_0\right)
@@ -226,30 +227,30 @@ in die Daten gefittet wurde.
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.7\linewidth]{plots/pol.pdf}
-  \caption{Leistung des LASERs als Funktion des Polarisationswinkels}
+  \caption{Leistung des LASERs als Funktion des Polarisationswinkels.}
   \label{fig:2}
 \end{figure}
 \noindent
-In \autoref{fig:2} Sind die Daten in einem Scatter Plot aufgetragen und der zugehörige Fit der Funktion in \autoref{eqn:1} zu sehen.
-Die Parameter der Gleichung lassen sich dabei auf 
+In \autoref{fig:2} sind die Daten in einem Scatter Plot aufgetragen und der zugehörige Fit der Funktion in \autoref{eqn:1} zu sehen.
+Die Parameter der Gleichung lassen sich dabei auf
 \begin{align}
-  \Phi_0 &= 68.834 \pm 0.018 \, \, ^\circ \\
+  \Phi_0 &= 68.834 \pm 0.018 \, \, ^\circ \, ,\\
   I_0 &= 3.56078 \pm 0.00009 \, \, \mathrm{mW}
 \end{align}
-wobei $I_0$ die Leistung des Lasers ohne Polarisationsfilter ist. 
+bestimmen, wobei $I_0$ die Leistung des Lasers ohne Polarisationsfilter ist.
 \noindent
-\newpage 
+\newpage
 \subsection{Abhängigkeit der longitudinalen Resonatormoden von der Resonatorlänge}
-Wie in \autoref{sec:transversalemoden} beschrieben bilden sich im Resonator des LASERs longitudinale Moden aus welche direkt Abhängig von der Länge des Resonators sind. Die Frequenzen dieser Moden haben gleichmäßige Abstände, wie in Gleichung (ref) zu erkennen ist.
-Ohne Fabry-Perot-Etalon ist der LASER im Multi-Moden betrieb und die longitudinalen Frequenzen und deren Abstände sind direkt Messbar. 
+Wie in \autoref{sec:transversalemoden} beschrieben bilden sich im Resonator des LASERs longitudinale Moden aus, welche direkt von der Länge des Resonators abhängig sind. Die Frequenzen dieser Moden haben gleichmäßige Abstände, wie in \autoref{eqn:long} zu erkennen ist.
+Ohne Fabry-Perot-Etalon ist der LASER im Multi-Moden-Betrieb und die longitudinalen Frequenzen und deren Abstände sind direkt messbar.
 \begin{table}[H]
   \centering
-  \caption{Position der longitudinalen Frequenz Peaks für verschiedene Resonatorlängen}
+  \caption{Position der longitudinalen Frequenz Peaks für verschiedene Resonatorlängen.}
   \begin{tabular}{S ||S| S| S| S| S| S}
       \toprule
-      {Resonatorlänge / $\mathrm{cm}$} & {55.5} & {70}  & {80} & {90} & {100}  & {110}\\
+      {\textbf{Resonatorlänge} / $\mathrm{cm}$} & {55.5} & {70}  & {80} & {90} & {100}  & {110}\\
       \midrule
-      {Pos. der Peaks / $\mathrm{MHz}$} & 266 & 218& 188& 169& 154& 139\\
+      {\textbf{Pos. der Peaks} / $\mathrm{MHz}$} & 266 & 218& 188& 169& 154& 139\\
        &533 & 435 & 357 & 338 & 304 & 274 \\
        &799 & 653 & 563 & 506 & 454 & 409 \\
        &1065 & 818 & 746 & 675 & 608 & 544 \\
@@ -261,34 +262,34 @@ Ohne Fabry-Perot-Etalon ist der LASER im Multi-Moden betrieb und die longitudina
   \end{tabular}
   \label{tab:4}
 \end{table}
-\noindent 
-In \autoref{tab:4} sind die Messwerte dieser Peaks für verschiedene Resonatorlängen aufgetragen. Aus diesen Messwerten lassen sich die Abstände der Peaks berechnen, und durch das umstellen von Gleichung (ref) zugehörige
+\noindent
+In \autoref{tab:4} sind die Messwerte dieser Peaks für verschiedene Resonatorlängen aufgetragen. Aus diesen Messwerten lassen sich die Abstände der Peaks, und durch das Umstellen der \autoref{eqn:long}, die zugehörige Resonatorlänge
 \begin{equation}
   L = \frac{\text{c}}{2 \Delta \nu}
 \end{equation}
-lässt sich über die Abstände auf die eingestellte Resonatorlänge zurück schließen. Ist Gleichung (ref) korrekt, so wird sollte die Steigung einer Ausgleichsgeraden durch die Berechneten Resonatorlängen gegen die tatsächlichen Resonatorlängen ca. 1 betragen.
+berechnen. Ist \autoref{eqn:long} korrekt, so wird die Steigung einer Ausgleichsgeraden durch die berechneten Resonatorlängen gegen die tatsächlichen Resonatorlängen ca. 1 betragen.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.65\linewidth]{plots/long_mode.pdf}
-  \caption{Berechnete Resonatorlänge gegen die tatsächliche Resonatorlänge aufgetragen}
+  \includegraphics[width=0.7\linewidth]{plots/long_mode.pdf}
+  \caption{Berechnete Resonatorlänge gegen die tatsächliche Resonatorlänge aufgetragen.}
   \label{fig:3}
 \end{figure}
 \noindent
-In \autoref{fig:3} ist diese Darstellung und der zugehörige Fit zu sehen. Die Fitparameter der Geradengleichung
+In \autoref{fig:3} sind diese Darstellung und der zugehörige Fit zu sehen. Die Fitparameter der Geradengleichung
 \begin{equation}
-  f\left(x\right) = m \cdot x + n 
+  f\left(x\right) = m \cdot x + n
 \end{equation}
-ergeben sich auf 
+ergeben sich auf
 \begin{align}
   m &= 0.956 \pm 0.003 \\
   n &= 0.046 \pm 0.002 \, \, \mathrm{m}
 \end{align}
 \newpage
 \subsection{Messung der transversalen LASER Moden}
-In Tabelle \ref{tab:5} sind die Messwerte der TEM Moden Vermessung abgebildet. 
+In Tabelle \ref{tab:5} sind die Messwerte der TEM Moden Vermessung abgebildet.
 \begin{table}[H]
   \centering
-  \caption{Leistung des Lasers$P$ für verschiedene Abstände von der Strahlachse $x$, links: $TEM_{00}$, rechts: $TEM_{01}$}
+  \caption{Leistung des LASERs $P$ für verschiedene Abstände von der Strahlachse $x$, links: $\text{TEM}_{00}$, rechts: $\text{TEM}_{01}$.}
   \begin{tabular}{S[table-format=3] S[table-format=2(2)]}
       \toprule
       {$x$ / $\mathrm{mm}$} & {$P$ / $\mathrm{mW}$} \\
@@ -346,43 +347,44 @@ In Tabelle \ref{tab:5} sind die Messwerte der TEM Moden Vermessung abgebildet.
   \label{tab:5}
 \end{table}
 \noindent
-Wie in Kapitel (ref) der Theorie beschrieben folgen die Intensitäten der $TEM_{lp}$ Moden den Hermite-Polynomen überlagert mit einer Gaußverteilung.
-Aufgrund dessen werden an die Daten der $TEM_{00}$ Messung eine Funktion der Form 
+Wie im \autoref{sec:transversalemoden} der Theorie beschrieben, folgen die Intensitäten der $\text{TEM}_{lp}$ Moden den Hermite-Polynomen, überlagert mit einer Gaußverteilung.
+Aufgrund dessen werden an die Daten der $\text{TEM}_{00}$ Messung eine Funktion der Form
 \begin{equation}
   P\left(x\right) = I_0 \cdot \text{exp}\left( \frac{ -2 \left(x - x_1\right)^2}{\omega^2} \right)
 \end{equation}
-und an die Daten der $TEM_{01}$ Messung eine Funktion der Form
+Und an die Daten der $TEM_{01}$ Messung eine Funktion der Form
 \begin{equation}
   P\left(x\right) = I_0 \cdot \left(\frac{\left(x - x_1\right)}{\omega}\right)^2 \cdot \text{exp}\left( \frac{-2 \left(x - x_0\right)^2}{\omega^2} \right)
 \end{equation}
-gefittet. Dabei sind die Parameter $x_0$ und $x_1$ nicht Teil der Theorie, jedoch in den jeweiligen Fit Funktionen um für mögliche systematische Unsicherheiten zu korrigieren.
+gefittet. Dabei sind die Parameter $x_0$ und $x_1$ nicht Teil der Theorie, jedoch in den jeweiligen Fit-Funktionen, um für mögliche systematische Unsicherheiten zu korrigieren.
 \begin{figure}[H]
     \centering
     \begin{minipage}{0.48\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{plots/TEM_00.pdf}
-        \caption{$TEM_{00}$ Daten und Fit}
+        \caption{$TEM_{00}$ Daten und Fit.}
         \label{fig:4}
     \end{minipage}\hfill
     \begin{minipage}{0.48\textwidth}
         \centering
         \includegraphics[width=1\textwidth]{plots/TEM_01.pdf}
-        \caption{$TEM_{01}$ Daten und Fit}
+        \caption{$TEM_{01}$ Daten und Fit.}
         \label{fig:5}
     \end{minipage}
 \end{figure}
 \noindent
-In \autoref{fig:4} und \autoref{fig:5} sind die aufgetragenen Daten und zugehörigen Fits der beiden vermessenen $TEM$ Moden zu sehen. Die Parameter des $TEM_{00}$ Fits ergeben sich dabei auf 
+In \autoref{fig:4} und \autoref{fig:5} sind die aufgetragenen Daten und zugehörigen Fits der beiden vermessenen TEM Moden zu sehen. Die Parameter des $\text{TEM}_{00}$ Fits ergeben sich dabei auf
 \begin{align}
   I_0 &= 0.095 \pm 0.00 \, \, \mathrm{mW} \\
   x_1 &= -0.0322 \pm 0.0002 \, \, \mathrm{mm} \\
-  \omega &= 4.3711 \pm 0.0009 \, \, \mathrm{mm} 
+  \omega &= 4.3711 \pm 0.0009 \, \, \mathrm{mm}
 \end{align}
-und die Parameter der $\text{TEM}_{01}$ Mode auf 
+und die Parameter der $\text{TEM}_{01}$ Mode auf
 \begin{align}
   I_0 &= 0.11 \pm 0.00 \, \, \mathrm{mW} \\
   x_0 &= -0.139 \pm 0.005 \, \, \mathrm{mm} \\
   x_1 &= -0.178 \pm 0.005 \, \, \mathrm{mm} \\
-  \omega &= 4.068 \pm 0.008 \, \, \mathrm{mm} 
+  \omega &= 4.068 \pm 0.008 \, \, \mathrm{mm}
 \end{align}
-wobei die identischen Parameter zwischen den Moden nur kleine Abweichungen voneinander aufweisen.
+wobei die identischen Parameter $x_0$, $\omega$ und $I_0$ zwischen den Moden nur kleine Abweichungen voneinander aufweisen.
+\newpage

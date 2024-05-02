@@ -21,22 +21,33 @@ berechnet.
 %\end{table}
 
 \subsection{Stabilitätsbedingung}
-Für die Überprüfung der Stabilitätsbedingung konnte für beide Resonatoren nicht die in \autoref{sec:a1} berechnete theoretische obere Resonatorlänge vermessen werden. Grund dafür ist, dass bei dem bikonkaven Resonator die optische Schiene keine ausreichende länge hat um $\SI{2800}{mm}$ zu erreichen. Bei dem plan konkaven Aufbau war die LASER justierung sehr aufwändig, weswegen nicht ausreichend Zeit zur verfügung stand um bis zu einer Resonatorlänge von $\SI{1400}{mm}$ zu erreichen.
-Trotzdessen ist in den Daten zu erkennen, dass in den theoretisch stabilen Bereichen der LASER stabil funktioniert und die Leistung des LASERs unabhängig ist von der Resonatorlänge. 
+Für die Überprüfung der Stabilitätsbedingung konnte für beide Resonatoren nicht die in \autoref{sec:a1} berechnete theoretische obere Resonatorlänge vermessen werden. Der Grund dafür ist, dass bei dem bikonkaven Resonator die optische Schiene keine ausreichende Länge hat, um $\SI{2800}{mm}$ zu erreichen. Bei dem plan-konkaven Aufbau war die Laserjustierung sehr aufwändig, weswegen nicht ausreichend Zeit zur Verfügung stand, um bis zu einer Resonatorlänge von $\SI{1400}{mm}$ zu erreichen.
+Trotzdessen ist in den Daten zu erkennen, dass in den theoretisch stabilen Bereichen der LASER stabil funktioniert und die Leistung des LASERs unabhängig ist von der Resonatorlänge.
 \subsection{Wellenlänge des LASERs}
+In \autoref{tab:Diskussion} sind die Messwerte und zugehörigen Abweichungen zum Literaturwert der Wellenlänge mit $\lambda_\text{theo} = \SI{633}{nm}$ \cite{eichler} zu sehen.
 \begin{table}[H]
     \centering
-    \caption{Experimentell bestimmte Halbwärtszeit $T_{exp}$, Theoriewert $T_{theo}$ und Abweichung in \%.}
+    \caption{Experimentell bestimmte Wellenlänge $\lambda_\text{exp}$, Theoriewert $\lambda_\text{theo}$ und Abweichung in \%.}
     \begin{tabular}{c c c}
         \toprule
-        {$T_{exp}\,/\symup{s}$} & {$T_{theo}\,/\symup{s}$} & {$\Delta\,/\symup{\%}$}\\
+        {$\lambda_\text{exp}\,/\symup{nm}$} & {$\lambda_\text{theo}\,/\symup{nm}$} & {$\Delta\,/\symup{\%}$}\\
         \midrule
-        
+        {$641 \pm 11$} & 633 & {$1.3 \pm 1.7$} \\
+        {$640 \pm 16$} & 633 & {$1.2 \pm 2.5$} \\
+        {$633 \pm 8$} & 633 & {$0.0 \pm 1.3$} \\
+        {$627 \pm 11$} & 633 & {$0.9 \pm 1.7$} \\
         \bottomrule
     \end{tabular}
     \label{tab:Diskussion}
 \end{table}
+Die Abweichungen sind dabei minimal, jedoch haben die Wellenlängenmessungen relativ große Fehler. Diese sind auf den in \autoref{tab:3} zu erkennenden großen Versatz zwischen linker und rechter Seite vom Hauptmaximum zurück zu führen. Zu den gemittelten Werten von beiden Seiten wurde der Standardfehler des Mittelwerts gebildet und nach Gaußscher Fehlerfortpflanzung der Fehler der Wellenlängen berechnet. Dieser Versatz hat als Ursache, dass Gitter und Schirm nicht perfekt parallel zueinander ausgerichtet waren während der Durchführung des Versuches.
 \subsection{Polarisationsrichtung des LASERs}
+Zu der Ausrichtung der Brewsterfenster des LASERs ist kein Wert vorhanden, weswegen keine Aussage über die Richtigkeit des Polarisationswinkels des LASERs möglich ist. Auffällig ist dennoch, dass die gemessenen Werte sehr gut zu dem von der Theorie vorhergesagten Modell passen und die bestimmten Parameter sehr kleine Fehler aufweisen. Es ist daher davon auszugehen, dass das Ergebnis von
+$\Phi_0 = 68.834 \pm 0.018 \, \, ^\circ$ korrekt ist.
 \subsection{Longitudinale Moden des LASERs}
+Bei der Messung der longitudinalen Moden des LASERs, insbesondere bei der Darstellung des Zusammenhangs der Resonatorlänge zu den Frequenzabständen der Moden, sind die großen Fehlerbalken in \autoref{fig:3} Auffällig.
+Diese kommen bei relativ kleinen Resonatorlängen zustande, da bei der Messung der Positionen der Peaks weniger Peaks vorhanden sind als bei größeren Resonatorlängen. Es sind also weniger Daten über die Abstände der Peaks vorhanden, weshalb Ausreißer in den Messungen einen größeren Einfluss auf den Fehler der Messwerte haben als bei Messreihen mit mehr Daten.
+Trotzdessen wird der Zusammenhang in \autoref{eqn:long} durch die abgebildete Grafik klar und der Steigungsparameter $m = 0.956 \pm 0.003$ weicht mit $4.4 \pm 0.3 \, \, \%$ von dem theoretischen Wert mit $m_\text{theo} = 1$ ab.
 \subsection{Transversale Moden des LASERs}
+Bei der Vermessung der Transversalmoden des LASERs gibt es keinen theoretischen Wert für die Parameter der Fits in \autoref{fig:4} \autoref{fig:5}. Es ist gut zu erkennen, dass die Daten den theoretischen Modellen folgen, wobei besonders die $\text{TEM}_{00}$ Mode sehr gut zu dem gefitteten Modell passt.
 \newpage
