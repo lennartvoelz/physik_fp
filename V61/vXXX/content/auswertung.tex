@@ -4,41 +4,15 @@ Die in \autoref{sec:Auswertung} gezeigten Grafiken und Rechnungen sind mithilfe 
 erstellt worden.
 
 
-\begin{table}[H]
-  \centering
-  \caption{}
-  \begin{tabular}{S[table-format=3] S[table-format=2(2)]}
-      \toprule
-      {$t\,/\symup{s}$} & {$N$} \\
-      \midrule
-
-      \bottomrule
-  \end{tabular}
-  \begin{tabular}{S[table-format=3] S[table-format=2(2)]}
-      \toprule
-      {$t\,/\symup{s}$} & {$N$} \\
-      \midrule
-      
-      \bottomrule
-  \end{tabular}
-  \label{tab:}
-\end{table}
-%Plots und Bilder
-%\begin{figure}[H]
-%  \includegraphics[width=\linewidth]{plots/.pdf}
-%  \caption{}
-%  \label{fig:}
-%\end{figure}
-
-
 \subsection{Überprüfung der Stabilitätsbedingung}
-Die Stabilitätsbedingung beschrieben in Gleichung (ref) beschreibt den Bereich der Resonatorlänge des HeNe LASERs in dem der LASER Strahl nicht divergiert. 
-Für die Verwendeten Resonatoren, aus Konvex Konvex und Plan Konvex Spiegelaufbauten ergeben sich mit einem Krümmungsradius von $r = \SI{1400}{mm}$ für die Konvexen spiegel die Stabilitätsgleichungen
+\label{sec:a1}
+Die Stabilitätsbedingung, Gleichung \autoref{eqn:stab}, beschreibt den Bereich der Resonatorlänge des HeNe LASERs, in dem der LASER Strahl nicht divergiert. 
+Für die Verwendeten Resonatoren, aus Konkav Konkav und Plan Konkav Spiegelaufbauten ergeben sich mit einem Krümmungsradius von $r = \SI{1400}{mm}$ für die konkaven Spiegel die Stabilitätsgleichungen
 \begin{align}
   \left(g_1 \cdot g_2\right)_{\text{KK}} &= \left( 1 - \frac{L}{1400} \right)^2 \\
   \left(g_1 \cdot g_2\right)_{\text{PK}} &= 1 \cdot \left( 1 - \frac{L}{1400} \right) \, .
 \end{align}
-Diese Erfüllen die Stabilitätsbedingung für $0 \leq L \leq 2800 \, \, \mathrm{mm}$ für den Bikonvexen Resonator und $0 \leq L \leq 1400 \, \, \mathrm{mm}$ für den Plan Konvexen Resonator.
+Diese Erfüllen die Stabilitätsbedingung für $0 \leq L \leq 2800 \, \, \mathrm{mm}$ für den bikonkaven Resonator und $0 \leq L \leq 1400 \, \, \mathrm{mm}$ für den Plan Konkaven Resonator.
 \begin{figure}[H]
   \centering
   \includegraphics[width=\linewidth]{plots/stab_theo.pdf}
@@ -98,10 +72,10 @@ In \autoref{fig:6} sind dabei die theoretischen Plots der Stabilitätsbedingung 
   \label{tab:1}
 \end{table}
 \noindent
-In \autoref{tab:1} sind die Daten der Messreihe zur Verifizierung der Stabilitätsbedingung zu sehen. In diesen ist zu erkennen, dass der Bikonvexe Resonator auch bei Resonatorlängen über $\SI{1400}{mm}$ stabil Funktioniert. 
+In \autoref{tab:1} sind die Daten der Messreihe zur Verifizierung der Stabilitätsbedingung zu sehen. In diesen ist zu erkennen, dass der Bikonkave Resonator auch bei Resonatorlängen über $\SI{1400}{mm}$ stabil Funktioniert und der plan konkave Resonator in ebenfalls in dem vorhergesagten Bereich funktioniert. 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.55\linewidth]{plots/stab_bed_1.png}
+  \includegraphics[width=0.55\linewidth]{plots/stab_bed_1.pdf}
   \caption{Leistung des LASERs als Funktion der Resonatorlänge}
   \label{fig:1}
 \end{figure}
@@ -177,7 +151,7 @@ Für die Bestimmung der Wellenlänge wurden für vier verschiedene Gitter die Ab
 \end{table}
 \noindent
 Die Werte werden für jedes Gitter für jeweils jede Beugungsordnung links und rechts gemittelt und der Standardfehler des Mittelwerts gebildet um für die Schiefe des Schirmes und Gitters zu der Strahlachse zu korrigieren.
-Für jedes der Gitter wird dann in jeder Beugungsordnung nach Gleichung (ref) die Wellenlänge berechnet und für jedes Gitter gemittelt. Es ergeben sich so für die gemessenen Wellenlänge für jedes Gitter
+Für jedes der Gitter wird dann in jeder Beugungsordnung nach \autoref{eqn:wel} die Wellenlänge berechnet und für jedes Gitter gemittelt. Es ergeben sich so für die gemessenen Wellenlänge für jedes Gitter
 \begin{align}
   \label{eqn:2}
   \lambda_1 &= 641 \pm 11 \, \, \mathrm{nm}  \\
@@ -266,7 +240,7 @@ wobei $I_0$ die Leistung des Lasers ohne Polarisationsfilter ist.
 \noindent
 \newpage 
 \subsection{Abhängigkeit der longitudinalen Resonatormoden von der Resonatorlänge}
-Wie in Kapitel (ref) beschrieben bilden sich im Resonator des LASERs longitudinale Moden aus welche direkt Abhängig von der Länge des Resonators sind. Die Frequenzen dieser Moden haben gleichmäßige Abstände, wie in Gleichung (ref) zu erkennen ist.
+Wie in \autoref{sec:transversalemoden} beschrieben bilden sich im Resonator des LASERs longitudinale Moden aus welche direkt Abhängig von der Länge des Resonators sind. Die Frequenzen dieser Moden haben gleichmäßige Abstände, wie in Gleichung (ref) zu erkennen ist.
 Ohne Fabry-Perot-Etalon ist der LASER im Multi-Moden betrieb und die longitudinalen Frequenzen und deren Abstände sind direkt Messbar. 
 \begin{table}[H]
   \centering
@@ -375,11 +349,11 @@ In Tabelle \ref{tab:5} sind die Messwerte der TEM Moden Vermessung abgebildet.
 Wie in Kapitel (ref) der Theorie beschrieben folgen die Intensitäten der $TEM_{lp}$ Moden den Hermite-Polynomen überlagert mit einer Gaußverteilung.
 Aufgrund dessen werden an die Daten der $TEM_{00}$ Messung eine Funktion der Form 
 \begin{equation}
-  P\left(x\right) = I_0 \cdot \text{exp}\left( \frac{ -2 \left(x - x_0\right)^2}{\omega^2} \right)
+  P\left(x\right) = I_0 \cdot \text{exp}\left( \frac{ -2 \left(x - x_1\right)^2}{\omega^2} \right)
 \end{equation}
 und an die Daten der $TEM_{01}$ Messung eine Funktion der Form
 \begin{equation}
-  P\left(x\right) = I_0 \cdot \left(\frac{\left(x - x_0\right)}{\omega}\right)^2 \cdot \text{exp}\left( \frac{-2 \left(x - x_0\right)^2}{\omega^2} \right)
+  P\left(x\right) = I_0 \cdot \left(\frac{\left(x - x_1\right)}{\omega}\right)^2 \cdot \text{exp}\left( \frac{-2 \left(x - x_0\right)^2}{\omega^2} \right)
 \end{equation}
 gefittet. Dabei sind die Parameter $x_0$ und $x_1$ nicht Teil der Theorie, jedoch in den jeweiligen Fit Funktionen um für mögliche systematische Unsicherheiten zu korrigieren.
 \begin{figure}[H]

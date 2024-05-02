@@ -42,15 +42,15 @@ print('Für Grid 3 beträgt die bestimmte Wellenlänge',W(dist_3, 1/g3, d3))
 print('Für Grid 4 beträgt die bestimmte Wellenlänge',W(dist_4, 1/g4, d4))
 
 #Plotten
-#stab bed
-# ax, fig = plt.subplots(constrained_layout=True)
-# fig.scatter(res_len_1, P_1, color='red', label='Datenpunkte', marker='x')
-# fig.set_xlabel(r'Resonatorlänge / $\mathrm{cm}$')
-# fig.set_ylabel(r'Leistung / $\mathrm{mW}$')
-# fig.grid()
-# ax.legend()
-# ax.savefig('plots/stab_bed_1.png')
-# ax.clf()
+# stab bed
+ax, fig = plt.subplots(constrained_layout=True)
+fig.scatter(res_len_1, P_1, color='red', label='Datenpunkte', marker='x')
+fig.set_xlabel(r'Resonatorlänge / $\mathrm{cm}$')
+fig.set_ylabel(r'Leistung / $\mathrm{mW}$')
+fig.grid()
+ax.legend()
+ax.savefig('plots/stab_bed_1.pdf')
+ax.clf()
 #polarisation
 
 def pol(deg, phi_0, I_0):
@@ -162,7 +162,7 @@ fig.plot(x_run, stab_2(x_run), color='blue', label='Stabilitätsbedingung Plan-K
 #mark borders of stability zones for both resonators on the x axis with a vertical line
 fig.axvline(x=1400, color='blue', linestyle='--', label = 'Stabilitätsgrenze Bikonkaver Resonator')
 fig.axvline(x=2800, color='red', linestyle='--' , label = 'Stabilitätsgrenze Plan-Konkaver Resonator')
-fig.fill_between(x_run, 0, 1, color='green', alpha=0.4, label='Stabilitätsbereich')
+# fig.fill_between(x_run, 0, 1, color='green', alpha=0.4, label='Stabilitätsbereich')
 fig.set_xlabel(r'Resonatorlänge $L$ / $\mathrm{mm}$')
 fig.set_ylabel(r'Stabilitätsparameter $g_1 \cdot g_2$')
 fig.set_ylim(-0.6, 1.2)

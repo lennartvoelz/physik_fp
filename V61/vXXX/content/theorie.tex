@@ -32,8 +32,12 @@ Der Resonator besteht aus zwei Spiegeln, von denen einer teilweise durchlässig 
 eine Verstärkung des Lichts durch stimulierte Emission. Diese Verstärkung ist dabei umso größer, je länger die Verweildauer des Photons im Resonator ist.
 Die Verweildauer ist dabei abhängig von der Länge des Resonators und der Reflektivität der Spiegel. Dadurch, dass ein offener Resonator verwendet wird, entsteht gerichtetes Licht, das durch den
 teilweise durchlässigen Spiegel austritt.\\
-Eine Kennzahl für den Resonator ist der Stabilitätsparameter $g_1 g_2$. Für einen stabilen Resonator gilt $0 < g_1 g_2 < 1$ und
-ist durch zwei konfokale Spiegel gegeben. Ein konfokaler Spiegel hat den Krümmungsradius $r_1 = r_2 = L/2$, wobei $L$ die Länge des Resonators ist. $g_1$ und $g_2$ ergeben sich mit den
+Eine Kennzahl für den Resonator ist der Stabilitätsparameter $g_1 g_2$. Für einen stabilen Resonator gilt 
+\begin{equation}
+    \label{eqn:stab}
+    0 \leq g_1 \cdot g_2 \leq 1
+\end{equation}
+und ist durch zwei konfokale Spiegel gegeben. Ein konfokaler Spiegel hat den Krümmungsradius $r_1 = r_2 = L/2$, wobei $L$ die Länge des Resonators ist. $g_1$ und $g_2$ ergeben sich mit den
 Krümmungsradien und der Resonatorlänge zu
 \begin{equation*}
     g_i = 1 - \frac{L}{r_i}.
@@ -78,7 +82,7 @@ der Intensität senkrecht zur Ausbreitungsrichtung auszeichnet. Die Intensitäts
 \end{equation*}
 Höhere Moden ergeben sich mit den Hermite-Polynomen und der Gaußfunktion. Die Intensitätsverteilung der $TEM_{10}$-Mode ist beispielsweise gegeben durch
 \begin{equation*}
-    I(r) = I_0 \left(\frac{2r}{w}\right)^2 \exp\left(-2\frac{r^2}{w^2}\right).
+    I(r) = I_0 \left(\frac{r}{w}\right)^2 \exp\left(-2\frac{r^2}{w^2}\right).
 \end{equation*}
 Einige Moden sind in \autoref{fig:moden} dargestellt.
 \begin{figure}[H]
@@ -100,6 +104,7 @@ Oberfläche polarisiert ist. Durch die Hintereinanderschaltung von mehreren Brew
 \subsection{Wellenlänge}\label{sec:wellenlaenge}
 Die Wellenlänge des Lasers kann durch Beugung an einem Gitter bestimmt werden. Die Wellenlänge ergibt sich mit
 \begin{equation*}
+    \label{eqn:wel}
     \lambda = \frac{g \cdot a_k}{k \cdot \sqrt{e^2 + a_k^2}},
 \end{equation*}
 wobei $g$ die Gitterkonstante, $a_k$ der Abstand des $k$-ten Maximums zum Hauptmaximum und $e$ der Abstand des Schirms zum Gitter ist.\\
