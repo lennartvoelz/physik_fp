@@ -12,12 +12,53 @@ what is called a planar wave function
 where $\vec{k}$ is the direction of propagation and $\omega$ is the frequency of the wave.
 For a fixed place, the electromagnetic field reduces to a harmonic oscillation in time given by the function
 \begin{equation}
-    \vec{E}\left(\vec{x}, t\right) = \vec{E_0} \, \text{cos} \left(\omega t + \delta\right)
+    \vec{E}\left( t\right) = \vec{E_0} \, \text{cos} \left(\omega t + \delta\right)
 \end{equation}
 where the place component has bin absorbed into a arbitrary phase shift $\delta$.
 \subsubsection{Polarisation}
+Light is a transversal wave with its electric and magnetic field vector oszillating perpendicular to its direction of propagation $\vec{k}$. This gives field vector two degrees of freedom $x,y$ if $\vec{k}$ is parallel to $z$.
+One can then differentiate 3 cases:
+\begin{itemize}
+    \item[1] \textbf{linear polarisation}: The field components in $x,y$ direction oscillate with arbitrary amplitudes and a constant phase shift of $0^\circ$, the field vector oszillates in a constant plane.
+    \item[2] \textbf{circular polarisation}: The field components in $x, y$ direction oscillate with equal amplitudes and a constant phase shift of $90^\circ$, the field vector describes a circular motion around its direction of propagation.
+    \item[3] \textbf{no polarisation}: The field components in $x,y$ have arbitrary amplitudes and no constant phase shift, the field vector does not oscillate in a constant plane or describes a circular motion.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\linewidth]{polar.pdf}
+    \caption{Polarisation modes of light (linear and circular, left to right). \cite{polarisation}}
+    \label{fig:1}
+\end{figure}
+\noindent
+\autoref{fig:1} shows linear polarisation on the left and circular polarisation on the right, the red dottet line shows the movement of the electric field vector. 
+For two electromagnetic waves to interfer they have to be polarised in the same direction. 
 \subsubsection{Coherence}
+Light is coherent when its direction $\vec{k}$, frequency $\omega$ and phase $\delta$ is the same for every wavepackege that makes up the total planar wave. In this experiment coherent light is produced by a HeNe Laser, which works by induced photon emission. If a photon emission is induced by another photon, the induced photon is coherent with the other photon. By 
+amplifying the amount of induced photons in an active medium in a so called resonator, the HeNe achieves a coherent beam of light. The distance, in which the phase of two wavefronts of a single light beam diverge by such an amount, that no visible interference are achievable with this lightbeam is called coherence length. It is defined by 
+\begin{equation}
+    l_c = \tau_c \cdot \frac{c}{n}
+\end{equation}
+where $\frac{c}{n}$ is the speed of light in a specific medium with refraction index $n$ and $\tau_c$ is the coherence time, which describes the time interval in which a stationary interference pattern is achievable with two lightbeams from the same source of delay $\Delta t$. Short: the maximum time delay in which two beams of light from the same source are coherent. 
+As the coherence length of a good HeNe Lasers lies in the orders of $10^3 m$ and the used Sagnak interferometer in this experiments has combined arm lengthes in the meter region, coherence of the Laser beam will be given in this experiment.
 \subsubsection{Interference}
+If two beams, which can be described as planar waves, combine on a fixed point, interference happens. The electric fields of two beams of the same frequency, each described by a function of the form 
+\begin{equation}
+    \vec{E}\left( t\right) = \vec{E_{0,1/2}} \, \text{cos} \left(\omega t + \delta_{1/2}\right)
+\end{equation}
+in a fixed point, simlpy add up like
+\begin{equation}
+    \vec{E}_{1,2}\left( t\right) = \vec{E_{1}}\left( t\right) + \vec{E_{2}}\left( t\right) \, .
+\end{equation}
+The intensity however is given by 
+\begin{equation}
+    I = \langle \vec{E}^2 \rangle \, ,
+\end{equation}
+$\langle \rangle$ being the mean over one period $T = \frac{2 \pi}{\omega}$. Assuming, that both beams have the same amplitude and hit a given point under the same angle, the intensity is given by an Integral of the form
+\begin{equation}
+    I_{1,2} = \frac{1}{T} \int_{t'}^{t' + T} \left( E_0 \, \text{cos}\left( \omega t' + \delta_1 \right) \right)^2 + \left( E_0 \, \text{cos}\left( \omega t' + \delta_2 \right) \right)^2 + 2 E_0^2 \text{cos}\left( \omega t' + \delta_1 \right) \cdot \text{cos}\left( \omega t' + \delta_2 \right) \symup{d}t' \, . 
+\end{equation}
+
 \subsection{Contrast of the interferometer}
 \subsection{Calculation of the refraction indices}
 \cite{sample}
