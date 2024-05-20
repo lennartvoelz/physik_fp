@@ -58,9 +58,91 @@ $\langle \rangle$ being the mean over one period $T = \frac{2 \pi}{\omega}$. Ass
 \begin{equation}
     I_{1,2} = \frac{1}{T} \int_{t'}^{t' + T} \left( E_0 \, \text{cos}\left( \omega t' + \delta_1 \right) \right)^2 + \left( E_0 \, \text{cos}\left( \omega t' + \delta_2 \right) \right)^2 + 2 E_0^2 \text{cos}\left( \omega t' + \delta_1 \right) \cdot \text{cos}\left( \omega t' + \delta_2 \right) \symup{d}t' \, . 
 \end{equation}
-
+where the two interfering beams of light are polarised the same.
+The resulting intensity $I_{1,2}$ then reduces to 
+\begin{equation}
+    I_{1,2} = I_0 \left( 1 + \text{cos}\left( \delta_1 - \delta_2 \right) \right)
+\end{equation}
+Which results in an anihilation of the two wavefront for $\Delta \delta = \left( 2n - 1 \right) \cdot \pi$ and an amplification for $\Delta \delta = \left( 2n - 1 \right) \cdot \frac{\pi}{2} $, $n \in \mathbb{N}^+$.
+For the case, that the two beams are perpendicular to each other before entering a polariser, of the first beam parallel to the zero degree axis of the polariser has an amplitude proportional to $E_{0,1}\left(\Phi\right) \propto \text{cos}\left( \Phi \right)$ after travelling through the polariser. The other beams amplitude is then proportional to $E_{0,2}\left(\Phi\right) \propto \text{cos}\left( \Phi + \pi\right) = \text{sin}\left( \Phi \right)$ resulting in an additional term in in the calculated intensity
+\begin{equation}
+    \label{eqn:1}
+    \begin{aligned}
+        &I_{1,2} = I_0 \left( 1 + \text{cos}\left( \delta_1 - \delta_2 \right) \text{cos}\left(\Phi\right) \text{sin}\left(\Phi\right)\right) \\
+        \implies &I_{\text{max,min}} = I_0 \left( 1 \pm 2\text{cos}\left(\Phi\right) \text{sin}\left(\Phi\right)\right)
+    \end{aligned}
+\end{equation}
+for the anihilating and amplifying phase shifts of the two wavefronts.
 \subsection{Contrast of the interferometer}
-\subsection{Calculation of the refraction indices}
-\cite{sample}
+The contrast of the interferometer is a measure of visibility of the interference pattern. It is given by 
+\begin{equation}
+    \label{eqn:2}
+    K = \frac{I_\text{max} - I_\text{min}}{I_\text{max} + I_\text{min}}
+\end{equation}
+and can be seen in \autoref{fig:2}
+\\
+\\
+fig
+\\
+\\
+When plugging \autoref{eqn:1} into \autoref{eqn:2} the contrast as a function of the polarisation angle $\Phi$ is given by 
+\begin{equation}
+    K\left(\Phi\right) = |\text{sin}\left(2\Phi\right)|.
+\end{equation}
 
+
+\subsection{Calculation of the refractive indices}
+The refractive index $n$ of a medium is an intrinsic property dependend of the electromagnetic properties of the medium. The speed of light in a medium changes accordingly to 
+\begin{equation}
+    c_m = \frac{c}{n_m} \, 
+\end{equation}
+which induces a phase shift relative to a beam not in the medium given by 
+\begin{equation}
+    \label{eqn:deldel}
+    \Delta \delta = \frac{2\pi L}{\lambda_{\text{vac}}} \Delta n \, .
+\end{equation}
+When using an interferometer, the number of maxima which are measured during a change of optical length of one of the beams is dependend on the total phase shift of the Laser.
+It can be calculated using 
+\begin{equation}
+    \label{eqn:M}
+    M = \frac{\Delta \delta}{2 \pi}
+\end{equation}
+where $M$ is the number of intensity maxima.
+When measuring $M$, $\Delta \delta$ has to be known as a function of the refractive index in order to obtain information about it. For two pieces of Glass with thickness $T$ under a rotation angle $\theta$, relative to a perpendicular axis to the beam, the the relative phase shift of both beams can be approximated by the expression
+\begin{equation}
+    \label{eqn:4}
+    \Delta \delta \left( n \right) = \frac{2 \pi T}{\lambda_\text{vac}}  \frac{n-1}{2n}\Delta \theta^2 \, .
+\end{equation}
+In the case of this experiment, there are two glass plates in both beams with an initial angle of $\theta_0 = 0.174533 \, \text{rad}$ in oposite direction. 
+\autoref{eqn:4} then has to be modified to 
+\begin{equation}
+    \begin{aligned}
+    \label{eqn:5}
+    \Delta \delta \left( n \right) &= \frac{2 \pi T}{\lambda_\text{vac}}  \frac{n-1}{2n} \left( \left(\theta + \theta_0\right)^2 - \left(\theta - \theta_0\right)^2 \right) \, \\
+    &= \frac{4 \pi T \left(n-1\right)}{\lambda_\text{vac}} \theta_0 \theta
+    \end{aligned}
+\end{equation}
+which can be put into \autoref{eqn:M} and solved for n to get 
+\begin{equation}
+    n = \left( 1 - \frac{\lambda_\text{vac} M }{2 \theta \theta_0 T} \right)^{-1} \, .
+\end{equation}
+For the refractive index of air, the refractive index can be calculated by phase shift analogous to \autoref{eqn:deldel} or as a function of preassure $p$.
+for the latter the Lorentz-Lorenz-Law 
+\begin{equation}
+    A = \frac{RT}{p} \frac{n^2-1}{n^2+2}
+\end{equation}
+can be used, which expresses the molrefraction $A$ as a function of the refractive index $n$ and preassure $p$.
+Under the assumption that $A$ can be approximated in linear order around $n = 1$ the equation to 
+\begin{equation}
+    A = \frac{2RT}{3p} \left(n-1\right) + \mathcal{O}\left( n^2 \right)
+\end{equation}
+under the use of a taylor series in $n$ around $n =1 $.
+Solving for n results in the equation
+\begin{equation}
+    n = \frac{3Ap}{2RT} + 1
+\end{equation}
+which is analogous to \autoref{eqn:deldel} put into \autoref{eqn:M} and solved for $n_\text{air}$ to
+\begin{equation}
+    n_\text{air} = \frac{\lambda_\text{vac} M}{L} + 1 \, .
+\end{equation}
 \newpage
