@@ -1,23 +1,30 @@
-\section{Diskussion}
-\label{sec:Diskussion}
-Im Folgenden werden die prozentualen Abweichungen mit 
+\section{Discussion}
+\label{sec:Discussion}
+In the following, the percentage deviations are calculated with
 \begin{equation}\label{eq:1}
-    \Delta = |\frac{exp - theo}{theo}|\cdot 100\%
+    \Delta = |\frac{exp - theo}{theo}|\cdot 100\%.
 \end{equation}
-berechnet.
 
-%Tabelle
-\begin{table}[H]
-    \centering
-    \caption{Experimentell bestimmte Halbwärtszeit $T_{exp}$, Theoriewert $T_{theo}$ und Abweichung in \%.}
-    \begin{tabular}{c c c}
-        \toprule
-        {$T_{exp}\,/\symup{s}$} & {$T_{theo}\,/\symup{s}$} & {$\Delta\,/\symup{\%}$}\\
-        \midrule
-        
-        \bottomrule
-    \end{tabular}
-    \label{tab:Diskussion}
-\end{table}
+\subsection{Contrast}
+The maximum contrast is measured to be $C = \SI{0.897(0.024)}{}$ at an angle of $\phi = \SI{135}{\degree}$.
+Expected is a maximum value at either $\SI{135}{\degree}$ or $\SI{45}{\degree}$ since the 
+contrast should follow $C ~ |\sin(2x)|$. Therefore the experimental value is in agreement with the theoretical prediction.
+
+\subsection{Refractive index of glass}
+The refractive index of the glass plate is measured to be $n = \SI{1.51(0.04)}{}$. The theoretical value for the refractive index of glass is $n = 1.5168$ \cite{n_glass}. The percentage deviation is calculated to be $\Delta = \SI{0.44}{\percent}$.
+This deviation is negligible and the theoretical value even lies in the uncertainty of the experimental value.
+
+\subsection{Refractive index of air}
+For the refractive index of air, the theoretical value is $n = 1.00027$ \cite{n_air}. This is again in
+perfect agreement with on the one hand the experimental value and on the other hand the value from Lorentz-Lorenz law:
+\begin{equation*}
+    n_{LL} = n_{reg} = \SI{1.00027}{}.
+\end{equation*}
+\\
+As one can see, there isn't much to discuss about the results.
+Overall, it can be said that the measurement appears to be very accurate. 
+This indicates good adjustment of the optical structure. 
+In addition, the difference measurement and averaging over several measurement series appear 
+to eliminate or limit statistical fluctuations.
 
 \newpage
