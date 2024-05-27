@@ -40,5 +40,4 @@ plt.legend(loc='upper left', fontsize='small')
 plt.grid()
 plt.tight_layout()
 plt.xticks(np.linspace(0, np.pi, 5), ['0', r'$\frac{\pi}{4}$', r'$\frac{\pi}{2}$', r'$\frac{3\pi}{4}$', r'$\pi$'])
-
-plt.savefig('../build/contrast.pdf')
+plt.savefig("build/contrast.pdf")

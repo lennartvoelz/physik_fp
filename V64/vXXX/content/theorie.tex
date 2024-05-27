@@ -1,25 +1,25 @@
 \section{Objective}
 \label{sec:Zielsetzung}
-    Objective of this experiment is to get to know the Sagnak Interferometer, as well as the measurement of its contrast and the refraction index of glass and air.
-\section{Theorie}
+    Objective of this experiment is to get to know the Sagnac Interferometer, as well as the measurement of its contrast and the refraction index of glass and air.
+\section{Theory}
 \label{sec:Theorie}
 \subsection{Light as an electromagnetic wave}
-Light is a electromagnetic wave, which can be derived from the maxwell equations. Its differential equation describes a simple harmonic motion of the field Vector in time and space and results in 
+Light is a electromagnetic wave, which can be derived from the maxwell equations. Its differential equation describes a simple harmonic motion of the field vector in time and space and results in 
 what is called a planar wave function
 \begin{equation}
-    \vec{E}\left(\vec{x}, t\right) = \vec{E_0} \, \text{exp} \left(i \left(\vec{x} \cdot \vec{k} - \omega t\right)\right)
+    \vec{E}\left(\vec{x}, t\right) = \vec{E}_0 \, \text{exp} \left(i \left(\vec{x} \cdot \vec{k} - \omega t\right)\right) \, 
 \end{equation}
 where $\vec{k}$ is the direction of propagation and $\omega$ is the frequency of the wave.
-For a fixed place, the electromagnetic field reduces to a harmonic oscillation in time given by the function
+For a fixed place $\vec{x} = \vec{x}_0$, the electromagnetic field reduces to a harmonic oscillation in time given by the function
 \begin{equation}
-    \vec{E}\left( t\right) = \vec{E_0} \, \text{cos} \left(\omega t + \delta\right)
+    \vec{E}\left( t\right) = \vec{E}_0 \, \text{cos} \left(\omega t + \delta\right)
 \end{equation}
 where the place component has bin absorbed into a arbitrary phase shift $\delta$.
 \subsubsection{Polarisation}
-Light is a transversal wave with its electric and magnetic field vector oszillating perpendicular to its direction of propagation $\vec{k}$. This gives field vector two degrees of freedom $x,y$ if $\vec{k}$ is parallel to $z$.
+Light is a transversal wave with its electric and magnetic field vector oszillating perpendicular to its direction of propagation $\vec{k}$. This gives the field vector two degrees of freedom $x \text{ and } y$ if $\vec{k}$ is parallel to $z$ in an arbitrary frame of reference.
 One can then differentiate 3 cases:
 \begin{itemize}
-    \item[1] \textbf{linear polarisation}: The field components in $x,y$ direction oscillate with arbitrary amplitudes and a constant phase shift of $0^\circ$, the field vector oszillates in a constant plane.
+    \item[1] \textbf{linear polarisation}: The field components in $x,y$ direction oscillate with arbitrary amplitudes and a constant phase shift of $0^\circ$ or $180^\circ$, the field vector oszillates in a constant plane.
     \item[2] \textbf{circular polarisation}: The field components in $x, y$ direction oscillate with equal amplitudes and a constant phase shift of $90^\circ$, the field vector describes a circular motion around its direction of propagation.
     \item[3] \textbf{no polarisation}: The field components in $x,y$ have arbitrary amplitudes and no constant phase shift, the field vector does not oscillate in a constant plane or describes a circular motion.
 \end{itemize}
@@ -27,28 +27,28 @@ One can then differentiate 3 cases:
 \begin{figure}[H]
     \centering
     \includegraphics[width=.8\linewidth]{polar.pdf}
-    \caption{Polarisation modes of light (linear and circular, left to right). \cite{polarisation}}
+    \caption{Polarisation modes of light (linear with $\Delta \delta = \pi$ and circular, left to right). \cite{polarisation}}
     \label{fig:1}
 \end{figure}
 \noindent
-\autoref{fig:1} shows linear polarisation on the left and circular polarisation on the right, the red dottet line shows the movement of the electric field vector. 
+\autoref{fig:1} shows linear polarisation on the left and circular polarisation on the right. The red dottet line shows the movement of the electric field vector. 
 For two electromagnetic waves to interfer they have to be polarised in the same direction. 
 \subsubsection{Coherence}
 Light is coherent when its direction $\vec{k}$, frequency $\omega$ and phase $\delta$ is the same for every wavepackege that makes up the total planar wave. In this experiment coherent light is produced by a HeNe Laser, which works by induced photon emission. If a photon emission is induced by another photon, the induced photon is coherent with the other photon. By 
-amplifying the amount of induced photons in an active medium in a so called resonator, the HeNe achieves a coherent beam of light. The distance, in which the phase of two wavefronts of a single light beam diverge by such an amount, that no visible interference are achievable with this lightbeam is called coherence length. It is defined by 
+amplifying the amount of induced photons in an active medium by using a so called resonator, the HeNe achieves a coherent beam of light. The distance, in which the phase of two wavefronts of a single light beam diverge by such an amount, that no visible interference is achievable with this lightbeam is called coherence length. It is defined by 
 \begin{equation}
     l_c = \tau_c \cdot \frac{c}{n}
 \end{equation}
-where $\frac{c}{n}$ is the speed of light in a specific medium with refraction index $n$ and $\tau_c$ is the coherence time, which describes the time interval in which a stationary interference pattern is achievable with two lightbeams from the same source of delay $\Delta t$. Short: the maximum time delay in which two beams of light from the same source are coherent. 
-As the coherence length of a good HeNe Lasers lies in the orders of $10^3 m$ and the used Sagnak interferometer in this experiments has combined arm lengthes in the meter region, coherence of the Laser beam will be given in this experiment.
+where $\frac{c}{n}$ is the speed of light in a specific medium with refraction index $n$, and $\tau_c$ is the coherence time. $\tau_c$ describes the time interval in which a stationary interference pattern is achievable with two lightbeams from the same source of delay $\Delta t$. Short: the maximum time delay in which two beams of light from the same source are coherent. 
+As the coherence length of a good HeNe Lasers lies in the orders of $10^3 m$ and the used Sagnac Interferometer in this experiments has combined arm lengthes in the meter region, coherence of the Laser beam will be given in this experiment.
 \subsubsection{Interference}
-If two beams, which can be described as planar waves, combine on a fixed point, interference happens. The electric fields of two beams of the same frequency, each described by a function of the form 
+If two coherent beams of light, described by planar wave functions combine in a fixed point $\vec{x} = \vec{x_0}$, interference happens. The electric fields of two beams of the same frequency, each described by a function of the form 
 \begin{equation}
-    \vec{E}\left( t\right) = \vec{E_{0,1/2}} \, \text{cos} \left(\omega t + \delta_{1/2}\right)
+    \vec{E}\left( t\right) = \vec{E}_{0,1/2} \, \text{cos} \left(\omega t + \delta_{1/2}\right)
 \end{equation}
 in a fixed point, simlpy add up like
 \begin{equation}
-    \vec{E}_{1,2}\left( t\right) = \vec{E_{1}}\left( t\right) + \vec{E_{2}}\left( t\right) \, .
+    \vec{E}_{1,2}\left( t\right) = \vec{E}_{1}\left( t\right) + \vec{E}_{2}\left( t\right) \, .
 \end{equation}
 The intensity however is given by 
 \begin{equation}
@@ -58,72 +58,77 @@ $\langle \rangle$ being the mean over one period $T = \frac{2 \pi}{\omega}$. Ass
 \begin{equation}
     I_{1,2} = \frac{1}{T} \int_{t'}^{t' + T} \left( E_0 \, \text{cos}\left( \omega t' + \delta_1 \right) \right)^2 + \left( E_0 \, \text{cos}\left( \omega t' + \delta_2 \right) \right)^2 + 2 E_0^2 \text{cos}\left( \omega t' + \delta_1 \right) \cdot \text{cos}\left( \omega t' + \delta_2 \right) \symup{d}t' \, . 
 \end{equation}
-where the two interfering beams of light are polarised the same.
+where the two interfering beams of light are polarised in the same direction.
 The resulting intensity $I_{1,2}$ then reduces to 
 \begin{equation}
+    \label{eqn:I12}
     I_{1,2} = I_0 \left( 1 + \text{cos}\left( \delta_1 - \delta_2 \right) \right)
 \end{equation}
-Which results in an anihilation of the two wavefront for $\Delta \delta = \left( 2n - 1 \right) \cdot \pi$ and an amplification for $\Delta \delta = \left( 2n - 1 \right) \cdot \frac{\pi}{2} $, $n \in \mathbb{N}^+$.
-For the case, that the two beams are perpendicular to each other before entering a polariser, of the first beam parallel to the zero degree axis of the polariser has an amplitude proportional to $E_{0,1}\left(\Phi\right) \propto \text{cos}\left( \Phi \right)$ after travelling through the polariser. The other beams amplitude is then proportional to $E_{0,2}\left(\Phi\right) \propto \text{cos}\left( \Phi + \pi\right) = \text{sin}\left( \Phi \right)$ resulting in an additional term in in the calculated intensity
+Which results in destructive interference of the two wavefront for $\Delta \delta = \left( 2n - 1 \right) \cdot \pi$ and a constructive interference for $\Delta \delta = 2 n \pi $, $n \in \mathbb{N}^+$.
+For the case that the two beams are perpendicular to each other before entering a polariser, with a polarisation angle $\Phi$ relative to the polarisation axis of the first beam, $I_{1,2}$ has to be modified. The first beam then has an amplitude proportional to $E_{0,1}\left(\Phi\right) \propto \text{cos}\left( \Phi \right)$ after travelling through the polariser while the other beams amplitude is proportional to $E_{0,2}\left(\Phi\right) \propto \text{cos}\left( \Phi + \pi\right) = \text{sin}\left( \Phi \right)$ resulting in a modification in the second term of \autoref{eqn:I12} to
 \begin{equation}
     \label{eqn:1}
     \begin{aligned}
-        &I_{1,2} = I_0 \left( 1 + \text{cos}\left( \delta_1 - \delta_2 \right) \text{cos}\left(\Phi\right) \text{sin}\left(\Phi\right)\right) \\
+        &I_{1,2} = I_0 \left( 1 + 2\text{cos}\left( \delta_1 - \delta_2 \right) \text{cos}\left(\Phi\right) \text{sin}\left(\Phi\right)\right) \\
         \implies &I_{\text{max,min}} = I_0 \left( 1 \pm 2\text{cos}\left(\Phi\right) \text{sin}\left(\Phi\right)\right)
     \end{aligned}
 \end{equation}
-for the anihilating and amplifying phase shifts of the two wavefronts.
+for the destructive and constructive phase shifts of the two wavefronts.
+\newpage
 \subsection{Contrast of the interferometer}
 The contrast of the interferometer is a measure of visibility of the interference pattern. It is given by 
 \begin{equation}
     \label{eqn:2}
-    K = \frac{I_\text{max} - I_\text{min}}{I_\text{max} + I_\text{min}}
+    C = \frac{I_\text{max} - I_\text{min}}{I_\text{max} + I_\text{min}}
 \end{equation}
-and can be seen in \autoref{fig:2}
-\\
-\\
-fig
-\\
-\\
-When plugging \autoref{eqn:1} into \autoref{eqn:2} the contrast as a function of the polarisation angle $\Phi$ is given by 
+and can be seen exemplary in \autoref{fig:2}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\linewidth]{high_low_cont.pdf}
+    \caption{High and low contrast of an interference pattern. \cite{article1}}
+    \label{fig:2}
+\end{figure}
+When plugging \autoref{eqn:1} into \autoref{eqn:2}, the contrast as a function of the polarisation angle $\Phi$ is given by 
 \begin{equation}
-    K\left(\Phi\right) = |\text{sin}\left(2\Phi\right)|.
+    \label{eqn:contrast}
+    C\left(\Phi\right) = |\text{sin}\left(2\Phi\right)|.
 \end{equation}
 
 
 \subsection{Calculation of the refractive indices}
-The refractive index $n$ of a medium is an intrinsic property dependend of the electromagnetic properties of the medium. The speed of light in a medium changes accordingly to 
+The refractive index $n$ of a medium is an intrinsic property directly dependend of the electromagnetic properties of the medium. The speed of light in a medium changes accordingly to 
 \begin{equation}
     c_m = \frac{c}{n_m} \, 
 \end{equation}
-which induces a phase shift relative to a beam not in the medium given by 
+which induces a phase shift relative to a beam which is in a vacuum given by 
 \begin{equation}
     \label{eqn:deldel}
     \Delta \delta = \frac{2\pi L}{\lambda_{\text{vac}}} \Delta n \, .
 \end{equation}
-When using an interferometer, the number of maxima which are measured during a change of optical length of one of the beams is dependend on the total phase shift of the Laser.
+When using an interferometer, the number of maxima, which are measured during a change of optical length of one of the beams, is dependend on the total phase shift of the Laser.
 It can be calculated using 
 \begin{equation}
     \label{eqn:M}
-    M = \frac{\Delta \delta}{2 \pi}
+    M = \frac{\Delta \delta}{2 \pi} \, ,
 \end{equation}
 where $M$ is the number of intensity maxima.
-When measuring $M$, $\Delta \delta$ has to be known as a function of the refractive index in order to obtain information about it. For two pieces of Glass with thickness $T$ under a rotation angle $\theta$, relative to a perpendicular axis to the beam, the the relative phase shift of both beams can be approximated by the expression
+When measuring $M$, $\Delta \delta$ has to be known as a function of the refractive index in order to obtain information about it. For two pieces of glass with thickness $T$ under a rotation angle $\theta$, relative to a perpendicular axis to the beam, the the relative phase shift of both beams can be approximated by the expression
 \begin{equation}
     \label{eqn:4}
-    \Delta \delta \left( n \right) = \frac{2 \pi T}{\lambda_\text{vac}}  \frac{n-1}{2n}\Delta \theta^2 \, .
+    \Delta \delta \left( n \right) = \frac{2 \pi T}{\lambda_\text{vac}}  \, \frac{n-1}{2n}\Delta \theta^2 \, .
 \end{equation}
 In the case of this experiment, there are two glass plates in both beams with an initial angle of $\theta_0 = 0.174533 \, \text{rad}$ in oposite direction. 
 \autoref{eqn:4} then has to be modified to 
 \begin{equation}
     \begin{aligned}
     \label{eqn:5}
-    \Delta \delta \left( n \right) &= \frac{2 \pi T}{\lambda_\text{vac}}  \frac{n-1}{2n} \left( \left(\theta + \theta_0\right)^2 - \left(\theta - \theta_0\right)^2 \right) \, \\
+    \Delta \delta \left( n \right) &= \frac{2 \pi T}{\lambda_\text{vac}} \, \frac{n-1}{2n} \left( \left(\theta + \theta_0\right)^2 - \left(\theta - \theta_0\right)^2 \right) \, \\
     &= \frac{4 \pi T \left(n-1\right)}{\lambda_\text{vac}} \theta_0 \theta
     \end{aligned}
 \end{equation}
 which can be put into \autoref{eqn:M} and solved for n to get 
 \begin{equation}
+    \label{eqn:glassn}
     n = \left( 1 - \frac{\lambda_\text{vac} M }{2 \theta \theta_0 T} \right)^{-1} \, .
 \end{equation}
 For the refractive index of air, the refractive index can be calculated by phase shift analogous to \autoref{eqn:deldel} or as a function of preassure $p$.
@@ -132,17 +137,19 @@ for the latter the Lorentz-Lorenz-Law
     A = \frac{RT}{p} \frac{n^2-1}{n^2+2}
 \end{equation}
 can be used, which expresses the molrefraction $A$ as a function of the refractive index $n$ and preassure $p$.
-Under the assumption that $A$ can be approximated in linear order around $n = 1$ the equation to 
+Under the assumption that $A$ can be approximated in linear order around $n = 1$ the equation simplifies to
 \begin{equation}
     A = \frac{2RT}{3p} \left(n-1\right) + \mathcal{O}\left( n^2 \right)
 \end{equation}
 under the use of a taylor series in $n$ around $n =1 $.
 Solving for n results in the equation
 \begin{equation}
+    \label{eqn:lorentz_lorenz}
     n = \frac{3Ap}{2RT} + 1
 \end{equation}
 which is analogous to \autoref{eqn:deldel} put into \autoref{eqn:M} and solved for $n_\text{air}$ to
 \begin{equation}
+    \label{eqn:refractive_index_air}
     n_\text{air} = \frac{\lambda_\text{vac} M}{L} + 1 \, .
 \end{equation}
 \newpage

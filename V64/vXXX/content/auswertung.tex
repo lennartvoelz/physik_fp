@@ -4,7 +4,7 @@ The graphics and calculations shown in \autoref{sec:Evaluation} were created usi
 
 \subsection{Determination of contrast}
 The measured values for the voltages $U_{max}$ and $U_{min}$ for the different polarizer angles $\phi$ are shown in \autoref{tab:contrast}. 
-The average value is formed from the 3 measurements and the contrast is thus calculated according to \autoref{eq:contrast}.
+The average value is formed from the 3 measurements and the contrast is thus calculated according to \autoref{eqn:2}.
 
 \begin{table}[h]
   \centering
@@ -43,7 +43,7 @@ The fit parameters are
 The maximum contrast occurs at 135°, where the contrast is $C = \SI{0.897(0.024)}{}$.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\textwidth]{../build/contrast.pdf}
+  \includegraphics[width=\textwidth]{build/contrast.pdf}
   \caption{Contrast plotted against the polarizer angle $\phi$.}
   \label{fig:contrast}
 \end{figure}
@@ -51,7 +51,7 @@ The maximum contrast occurs at 135°, where the contrast is $C = \SI{0.897(0.024
 \newpage
 
 \subsection{Refractive index of glass}
-To determine the refractive index of the glass plate, \autoref{eq:refractive_index} is used. 
+To determine the refractive index of the glass plate, \autoref{eq:glassn} is used. 
 Needed for this calculation are the maxima counts listed in \autoref{tab:refractive_index} and the wavelength of the light source $\lambda = \SI{632.8}{\nano\meter}$.
 Furthermore, the thickness of the glass plates is $d = \SI{1}{\milli\meter}$ and the angles are $\theta = \theta_0 = \SI{10}{\degree}$.
 \begin{table}[H]
@@ -104,16 +104,16 @@ In \autoref{tab:air} the measured values for $p$ and the corresponding maxima co
   \label{tab:air}
 \end{table}
 The average of the counts is calculated for each row. To determine the refractive index of air
-\autoref{eq:refractive_index_air} is used. The values for the refractive index are plotted against
+\autoref{eqn:refractive_index_air} is used. The values for the refractive index are plotted against
 the corresponding air pressure in \autoref{fig:air}. Also plotted are the fit of the data points to a linear function of the form
 \begin{equation}
   f(x) = a \cdot x + b
 \end{equation}
-and the theory curve according to the Lorentz-Lorenz equation \autoref{eq:lorentz_lorenz}.
+and the theory curve according to the Lorentz-Lorenz \autoref{eqn:lorentz_lorenz}.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\textwidth]{../build/air_and_lorentz.pdf}
+  \includegraphics[width=\textwidth]{build/air_and_lorentz.pdf}
   \caption{Refractive index of air plotted against the air pressure, theory curve and fit.}
   \label{fig:air}
 \end{figure}

@@ -73,4 +73,4 @@ ax[1].set_ylabel(r'$n(p)$')
 ax[1].legend()
 
 plt.tight_layout()
-plt.savefig("../build/air_and_lorentz.pdf")
+plt.savefig("build/air_and_lorentz.pdf")
