@@ -9,29 +9,25 @@ import uncertainties.unumpy as unp
 mu_B = const.physical_constants['Bohr magneton'][0]
 mu_0 = const.physical_constants['mag. constant'][0]
 h = const.physical_constants['Planck constant'][0]
-N =  154
-R = 15.79e-2
-
+N_H =  154
+R_H = 15.79e-2
+N_S = 11
+R_S = 16.39e-2
 
 # Daten einlesen
-p1 = np.genfromtxt('data/peak1.txt', unpack=True) /10
-p2 = np.genfromtxt('data/peak2.txt', unpack=True) /10
-os_1 = np.genfromtxt('data/os_p1.txt', unpack=True)
-os_2 = np.genfromtxt('data/os_p2.txt', unpack=True)
+p1 = np.genfromtxt('data/peak1.txt', unpack=True) 
+p2 = np.genfromtxt('data/peak2.txt', unpack=True) 
+os_1 = np.genfromtxt('data/os_p1.txt', unpack=True) * 2 / 1000
+os_2 = np.genfromtxt('data/os_p2.txt', unpack=True) * 2 / 1000
 
-def get_I(p, os):
-    return p + os * 2 / 1000
 
-def B(I):
+
+def B(I, N, R):
     return mu_0 * 8 * I * N / (np.sqrt(125) * R)
 
 
-I1 = get_I(p1, os_1)
-I2 = get_I(p2, os_2)
-
-
-B1 = B(I1)
-B2 = B(I2)
+B1 = B(p1, N_S, R_S) + B(os_1, N_H, R_H)
+B2 = B(p2, N_S, R_S) + B(os_2, N_H, R_H)
 
 x = np.arange(100000, 1100000, 100000)
 
@@ -45,14 +41,14 @@ params2, covariance2 = curve_fit(f, x, B2)
 errors2 = np.sqrt(np.diag(covariance2))
 print('Peak 1: ', params1, errors1)
 print('Peak 2: ', params2, errors2)
-print('Erdmagnetfeld vertikal: ', B(0.0244))
+print('Erdmagnetfeld vertikal: ', B(0.244, 20, 11.735e-2))
 x_plot = np.linspace(0, 1100000, 1000)
-plt.plot(x_plot/1e6, f(x_plot, *params1)*1e6, 'r--', label='Fit Peak 1')
-plt.plot(x_plot/1e6, f(x_plot, *params2)*1e6, 'b--', label='Fit Peak 2')
-plt.plot(x/1e6, B1*1e6, 'rx', label='Peak 1')
-plt.plot(x/1e6, B2*1e6, 'bx', label='Peak 2')
+plt.plot(x_plot/1e6, f(x_plot, *params1)*1e6, 'r--', label='Fit der Daten Peak 1')
+plt.plot(x_plot/1e6, f(x_plot, *params2)*1e6, 'b--', label='Fit der Daten Peak 2')
+plt.plot(x/1e6, B1*1e6, 'rx', label='Daten Peak 1')
+plt.plot(x/1e6, B2*1e6, 'bx', label='Daten Peak 2')
 plt.xlabel(r'Freuquenz $f$ / $\mathrm{Hz}$')
-plt.ylabel(r'Magnetfeld $B$ / $\mathrm{\mu T}$')
+plt.ylabel(r'Resonanzfeldstärke $B$ / $\mathrm{\mu T}$')
 plt.legend()
 plt.savefig('build/plot1.pdf')
 
@@ -76,6 +72,10 @@ print('gF_2_theo: ', gF_2_theo)
 print('gF_1_theo/gF_2_theo: ', gF_1_theo / gF_2_theo)
 print('gF_1/gF_2: ', gF_1 / gF_2)
 
+#relative abweichung der Landé-Faktoren
+print('abw gF_1: ', (gF_1 - gF_1_theo) / gF_1_theo)
+print('abw gF_2: ', (gF_2 - gF_2_theo) / gF_2_theo)
+
 #berechnung kernspins
 
 def I(gF, J, S, L, F):
@@ -86,23 +86,36 @@ I_2 = I(gF_2, 1/2, 1/2, 0, 3)
 print('I_1: ', I_1)
 print('I_2: ', I_2)
 
+#relative abweichung der spins
+I_1_theo = 3/2
+I_2_theo = 5/2
+#exp-theo/theo abweichung
+print('abw I_1: ', (I_1 - I_1_theo) / I_1_theo)
+print('abw I_2: ', (I_2 - I_2_theo) / I_2_theo)
+
+
 #Zeemann Effekt
 
 def delE_zem(gF, B, m, E_Hy):
-    return gF * mu_B * B + gF**2 * mu_B**2 * B**2 * (1 - 2 * m) / (E_Hy) * 6.242e+18
+    return gF * mu_B * B + gF**2 * mu_B**2 * B**2 * (1 + 2 * m) / (E_Hy) * 6.242e+18
 
 E_hy2 = 2.01e-24
 E_hy1 = 4.53e-24
 
 delE_zem_1 = delE_zem(gF_1, B1, 2, E_hy1)
-
+print(delE_zem_1)
+delE_zem_2 = delE_zem(gF_2, B2, 3, E_hy2)
+print(delE_zem_2)
+print(B1[-1]* 1e6, B2[-1]* 1e6)
 
 # verhältnisse 
-len_s = 18
-len_l = 34
+len_s = ufloat(18, 1)
+len_l = ufloat(34, 1)
 
 print('Anteil Element 1', len_s / (len_s + len_l))
 print('Anteil Element 2', len_l / (len_s + len_l))
+
+
 
 
 
