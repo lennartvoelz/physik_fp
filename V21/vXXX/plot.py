@@ -96,18 +96,41 @@ print('abw I_2: ', (I_2 - I_2_theo) / I_2_theo)
 
 #Zeemann Effekt
 
-def delE_zem(gF, B, m, E_Hy):
-    return gF * mu_B * B + gF**2 * mu_B**2 * B**2 * (1 + 2 * m) / (E_Hy) * 6.242e+18
+# def delE_zem(gF, B, m, E_Hy):
+#     return gF * mu_B * B + gF**2 * mu_B**2 * B**2 * (1 + 2 * m) / (E_Hy) * 6.242e+18
 
-E_hy2 = 2.01e-24
-E_hy1 = 4.53e-24
+# E_hy2 = 2.01e-24
+# E_hy1 = 4.53e-24
 
-delE_zem_1 = delE_zem(gF_1, B1, 2, E_hy1)
-print(delE_zem_1)
-delE_zem_2 = delE_zem(gF_2, B2, 3, E_hy2)
-print(delE_zem_2)
-print(B1[-1]* 1e6, B2[-1]* 1e6)
+# delE_zem_1 = delE_zem(gF_1, B1, 2, E_hy1)
+# print(delE_zem_1)
+# delE_zem_2 = delE_zem(gF_2, B2, 3, E_hy2)
+# print(delE_zem_2)
+# print(B1[-1]* 1e6, B2[-1]* 1e6)
 
+I_85 = I_2
+I_87 = I_1
+
+g_J85 = gJ(1/2, 1/2, 0)
+g_J87 = gJ(1/2, 1/2, 0)
+g_I85 = 0.541224
+g_I87 = 1.8341933333333
+Del_85 = 3036
+Del_87 = 6837.7
+
+def eps(B):
+    return 0.9273e-23 * B
+
+def w(g_I, g_J, B, Del):
+    return (g_J + g_I) * eps(B) / Del
+
+def E(g_I, g_J, B, Del, I, m_F):
+    return -eps(B) * g_I + (2 * w(g_I, g_J, B, Del) /(2 * I +1) + 2 *  w(g_I, g_J, B, Del)**2 * (1 - 2 * m_F)/(2*I+1)**2) * 6.242e+18
+
+print(E(g_I85, g_J85, B2[-1], Del_85, I_85, 3))
+print(E(g_I87, g_J87, B1[-1], Del_87, I_87, 2))
+print('B_85 = ', B2[-1]*1e6)
+print('B_87 = ', B1[-1]*1e6)
 # verhältnisse 
 len_s = ufloat(18, 1)
 len_l = ufloat(34, 1)
