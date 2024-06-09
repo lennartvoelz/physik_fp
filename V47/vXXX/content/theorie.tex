@@ -1,0 +1,46 @@
+\section{Introduction}
+\label{sec:Zielsetzung}
+Goal of this experiment is the measurement of the temperature dependency of the heat capacity $C_V$ at constant volume, according to the Debye model. 
+The Debye temperature $\Theta_D$ will also be measured and compared to the literature value.
+
+\section{Theory}
+\label{sec:Theorie}
+This section will give a brief overview of the theoretical framework needed to understand and interpret the following measurements. It will touch on the heat capacity $C_V$ in the context of solid state physics and explain the differences between three main theoretical models, describing the same phenomenon.
+If not explicitly cited otherwise, this section will rely on the book "Festkörperphysik" \cite{rehab}.
+\subsection{Classical theory of the heat capacity}
+
+\subsection{Oscillation of the cristalline structure}
+In order to understand the heat capacity of a solid state body, one has to first understand the oscillations of the cristalline structure, which will be introduced in this subsection.
+The cristalline structure, when viewed from a purely mathematical perspective, becomes a set of vectors which are linear combinations of its basis vectors. This static view of a solid state body can be filled with motion when one imagines these vectors as springs, connecting each pair of neighbouring atoms in the lattice. The problem to be solved is then nothing more than the simple harmonic equations of motion every physicist has solved at least once in their live.
+This approach neglects the electrons contribution to the overall problem as the introduced springs are nothing more than a quadratic approximation of the more complex electromagnetic potential each atom experiences. If we assume the electrons to be significantly faster than atomic nuclei, individual electromagnetic contributions of the electrons to the electromagnetic potential one atom experiences in the cristalline structure can be neglected as a static background.
+This approach is known as the Born-Oppenheimer approximation and it allows us to approximate the electromagnetic potential in quadratic order, resulting in a harmonic potential which acts like a spring.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{lattice.pdf}
+    \caption{1D lattice of 2 atoms with equal masses $M$ and different couplings $C_1$ and $C_2$, \cite{rehab}.}
+    \label{fig:t1}
+\end{figure}
+\noindent
+The equations of motion for a 1D lattice of 2 Atoms with equal masses $M$ and different couplings $C_1$ and $C_2$, see \autoref{fig:t1}, can then intuitively be written as 
+\begin{align}
+    M \frac{\text{d}^2 u_n}{\text{dt}^2} &= C_1 \left( v_n - u_n \right) + C_2 \left( v_{n-1} - u_n \right) \\
+    M \frac{\text{d}^2 v_n}{\text{dt}^2} &= C_1 \left( u_n - v_n \right) + C_2 \left( u_{n+1} - v_n \right)
+\end{align}
+where $u_n$ and $v_n$ are the deflection function of each type of atom in a latice that can be seen in \autoref{fig:t1}.
+Solving the equations for this simple case results in two solutions for the frequencies of the lattice oscillations, which can be seen in \autoref{fig:t2}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{dispersion.pdf}
+    \caption{Dispersion relation for a 1D lattice of 2 atoms with equal masses $M$ and different couplings $C_1$ and $C_2$, \cite{rehab}.}
+    \label{fig:t2}
+\end{figure}
+\noindent
+The upper branch of the dispersion relation in \autoref{fig:t2} is called the optical branch and the lower branch is called the accoustic branch. The optical branch is a result of the different couplings $C_1$ and $C_2$ and is not present in a lattice of equal couplings. There are $3N$ branches in a $3D$ lattice of $N$ different atoms, with $3N-3$ accoustic branches and $3$ optical branches, which are not dependent on the number of different atoms in the lattice.
+The different branches of the dispersion relation of a solid state body are often referred to as phonons, wich are quantized lattice vibration. 
+
+\subsection{Einstein model}
+\subsection{Debye model}
+
+
+
+\newpage

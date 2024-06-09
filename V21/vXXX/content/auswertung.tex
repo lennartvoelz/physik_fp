@@ -6,7 +6,12 @@ erstellt worden. Die Fehlerrechnung wird mithilfe der Python-Bibliothek Uncertai
 \subsection{Messung der Resonanzfeldstärke der Sweep Spule}
 \label{sec:Resonanzfeldstärke}
 Für die Messung der Resonanzfeldstärke der Sweep Spule wurde die Apparatur manuell so eingestellt, dass parallel zu der Nord-Süd-Achse des Erdmagnetfeldes steht. Zusätzlich musste die Vertikalkomponente 
-des Erdmagnetfeldes kompensiert werden, was durch Einstellen des Stromes in der Vertikalspule erreicht wurde. Der Strom in dieser Spule wurde auf $I_{\text{vertikal}} = \SI{0.244}{\ampere}$ gestellt,  was nach Gleichung (ref) einer magnetischen Feldstärke von $B_{\text{vertikal}} \approx \SI{37.39}{\micro\tesla}$ entspricht.
+des Erdmagnetfeldes kompensiert werden, was durch Einstellen des Stromes in der Vertikalspule erreicht wurde. Der Strom in dieser Spule wurde auf $I_{\text{vertikal}} = \SI{0.244}{\ampere}$ gestellt,  was nach der Helmholtzgleichung 
+\begin{equation}
+  \label{eqn:a1}
+  B = \frac{\mu_0 \cdot 8 \cdot I \cdot N}{\sqrt{125} \cdot R}
+\end{equation}
+einer magnetischen Feldstärke von $B_{\text{vertikal}} \approx \SI{37.39}{\micro\tesla}$ entspricht.
 Die Messwerte für die Messung der Resonanzfeldstärke sind in \autoref{tab:Resonanzfeldstärke} zu sehen. 
 \begin{table}[H]
   \centering
@@ -35,7 +40,7 @@ Die Spannung der horizontalen Spule lässt sich nach
 \begin{equation}
   I_{\text{ho}} = \frac{2 \cdot U_{\text{ho} }}{1000}
 \end{equation}
-in den Strom der horizontalen Spule umrechnen. Aus den Strömen in der Sweep und horizontalen Spule lassen sich die Magnetfelder der beiden Spulen nach (ref) berechnen.
+in den Strom der horizontalen Spule umrechnen. Aus den Strömen in der Sweep und horizontalen Spule lassen sich die Magnetfelder der beiden Spulen nach \autoref{eqn:a1} berechnen.
 Dabei sind $N_H = 154$ und $R_H = \SI{0.1579}{m}$ die Windungszahl und der Radius der horizontalen Spule und $N_S = 11$ und $R_S = \SI{0.1639}{m}$ die Windungszahl und der Radius der Sweep Spule.
 Die Magnetfelder der beiden Spulen werden addiert und sind in \autoref{fig:Resonanzfeldstärke} gegen die Frequenz aufgetragen. Dabei ist die Feldstärke $B$ die Feldstärke im Resonanzfall bei gegebener Frequenz $f$.
 \begin{figure}[H]
@@ -61,7 +66,7 @@ für den ersten Peak und auf
 \end{align*}
 für den zweiten Peak ergeben. $b_1$ und $b_2$ entsprechen dabei der horizontalen Erdmagnetfeldstärke, welche nicht durch das Ausrichten der Apparatur kompensiert werden konnte.
 \subsection{Messung des Lande-Faktors und des Kernspins}
-Aus $a_1$ und $a_2$ lässt sich nach Gleichung (ref) der Lande-Faktor der beiden Isotope bestimmen.
+Aus $a_1$ und $a_2$ lässt sich nach Umstellen der \autoref{eqn:t3} der Lande-Faktor der beiden Isotope bestimmen.
 Dieser ergibt sich für die Messwerte des ersten Peaks auf 
 \begin{equation}
   g_{F, 1} = \left(0.479 \pm 0.018 \right)
@@ -70,13 +75,13 @@ und für die Messwerte des zweiten Peaks auf
 \begin{equation}
   g_{F, 2} = \left(0.3232 \pm 0.0031 \right) \, .
 \end{equation}
-Nach Gleichung (ref) berechnen sich die Theoriewerte der Lande Faktoren für ${}^{85}\text{Rb}$ und ${}^{87}\text{Rb}$ auf 
+Nach Gleichung \autoref{eqn:t2} berechnen sich die Theoriewerte der Lande Faktoren für ${}^{85}\text{Rb}$ und ${}^{87}\text{Rb}$ auf 
 \begin{align*}
   g_{F, 85, \text{theo}} &= 0.\bar{3} \\
   g_{F, 87, \text{theo}} &= 0.5
 \end{align*}
 Weswegen der erste Peak dem Isotop ${}^{87}\text{Rb}$ und der zweite Peak dem Isotop ${}^{85}\text{Rb}$ zugeordnet werden kann.
-Die Kernspins der beiden Isotope können dann durch Umstellen der Gleichung (ref) auf 
+Die Kernspins der beiden Isotope können dann durch Umstellen der \autoref{eqn:t2} auf 
 \begin{align*}
   I_{87} &= \left(1.532 \pm 0.026\right) \\
   I_{85} &= \left(2.520 \pm 0.006\right)
@@ -102,9 +107,9 @@ ergeben. Dabei wurde ein Ablesefehler von $\pm 1$ angenommen. Aus den Längen de
   \frac{N_{85}}{N_{87} + N_{85}} \approx \left( 0.654 \pm 0.014 \right) \, .
 \end{equation}
 
-\subsection{abschätzung des quadratischen Zeeman Effekts}
+\subsection{Abschätzung des quadratischen Zeeman Effekts}
 \label{sec:Zeeman}
-Die Übergangsenergien der aufgespaltenen Zustände in der Quantenzahl $m_F$ lassen sich nach Gleichung (ref) abschätzen. Dabei sind die Lande-Faktoren der Kernspins der beiden Isotope 
+Die Übergangsenergien der aufgespaltenen Zustände in der Quantenzahl $m_F$ lassen sich nach \autoref{eqn:t1} abschätzen. Dabei sind die Lande-Faktoren der Kernspins der beiden Isotope 
 \begin{align*}
   g_{I, 85} &= 0.541224 \\
   g_{I, 87} &= 1.8341933333333 \, 

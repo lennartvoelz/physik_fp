@@ -31,17 +31,18 @@ des magnetischen Moments $\vec{\mu}_J$ auf den Gesamtdrehimpuls $\vec{J}$ betrac
     \vec{\mu}_J = g_J \cdot \mu_B \cdot \vec{J}
 \end{equation*}
 der Landé-Faktor $g_J$ zu 
-\begin{equation*}
+\begin{equation}
     g_J = 1 + \frac{J(J+1) + S(S+1) - L(L+1)}{2J(J+1)}.
-\end{equation*}
+\end{equation}
 Da es bei Alkalimetallen zusätzlich noch einen Kernspin $I$ gibt, muss der Gesamtdrehimpuls $\vec{F}$ betrachtet werden, der sich aus dem Gesamtdrehimpuls $\vec{J}$ und dem Kernspin $\vec{I}$ zusammensetzt:
 \begin{equation*}
     \vec{F} = \vec{J} + \vec{I}.
 \end{equation*}
 Für den Gesamtdrehimpuls $\vec{F}$ ergibt sich der Landé-Faktor $g_F$ zu
-\begin{equation*}
+\begin{equation}
+    \label{eqn:t2}
     g_F = g_J \cdot \frac{F(F+1) + J(J+1) - I(I+1)}{2F(F+1)}.
-\end{equation*}
+\end{equation}
 Die erste Aufspaltung der Energieniveaus ergibt sich durch die Spin-Bahn-Kopplung. Die Störung des Hamiltonoperators hat die Form
 \begin{equation*}
     H_{\text{LS}} = \alpha \cdot \vec{L} \cdot \vec{S}.
@@ -107,10 +108,11 @@ Wie in \autoref{subsec:Drehimpuls} beschrieben, gibt es verschiedene Energieaufs
 
 Für niedrige Magnetfeldstärken ist die Energieaufspaltung linear im Magnetfeld $B$. Wenn der Zeeman-Effekt dominiert, müssen Terme höherer Ordnung berücksichtigt werden. Die Energiedifferenz ist dann
 in quadratischer Ordnung gegeben durch
-\begin{equation*}
-    \Delta E = -\epsilon g_I \pm \frac{\Delta}{2} \cdot \bigg( \frac{2w}{2I+1} + \frac{2w^2(1-2m_F)}{(2I+1)^2}\bigg).
-\end{equation*}
-Dabei ist $\epsilon = \frac{e\hbar}{2m_e}B$, $w = \frac{\epsilon(g_J + g_I)}{\Delta}$ und $m_F = m_I \pm \frac{1}{2}$. Das grundlegende Prinzip des optischen Pumpens wurde bereits in \autoref{subsec:Mechanismus} erläutert.
+\begin{equation}
+    \label{eqn:t1}
+    \Delta E = -\epsilon g_I \pm \frac{\Delta}{2} \cdot \bigg( \frac{2w}{2I+1} + \frac{2w^2(1-2m_F)}{(2I+1)^2}\bigg) \, ,
+\end{equation}
+\cite{benumof}. Dabei ist $\epsilon = \frac{e\hbar}{2m_e}B$, $w = \frac{\epsilon(g_J + g_I)}{\Delta}$ und $m_F = m_I \pm \frac{1}{2}$. Das grundlegende Prinzip des optischen Pumpens wurde bereits in \autoref{subsec:Mechanismus} erläutert.
 Nun lässt sich an dem $\ce{^{87}Rb}$-Isotop konkret zeigen, wie optisches Pumpen in dem Versuch funktioniert.\\
 Wenn $\sigma^+$-Licht auf das Isotop trifft, gilt für die Auswahlregeln $\Delta m_J = +1$ bzw. $\Delta m_F = +1$. Da es keine Niveaus mit $m_F = 3$ gibt, sind die Elektronen im $m_F = 2$ Niveau
 "gefangen". Wenn jetzt wieder die Bedingung für die Relaxationszeit erfüllt ist, wird das Niveau $m_F = 2$ des $\ce{^{2}S_{1/2}}$-Grundzustands gepumpt.\\
@@ -119,9 +121,10 @@ Wenn nun die Transmission in Abhängigkeit eines äußeren Magnetfelds betrachte
 Um die Besetzungsinversion auszugleichen, wird ein Hochfrequenzfeld angelegt, das die Elektronen aus dem gepumpten Zustand relaxieren lässt. Die Transmission nimmt wieder ab, da mehr Licht
 absorbiert wird.\\
 Mit dem Hochfrequenzfeld kann auch eine Resonanz erzeugt werden. Dies ist durch einen Peak in der Absorption erkennbar. Die Resonanzbedingung ist gegeben durch
-\begin{equation*}
+\begin{equation}
+    \label{eqn:t3}
     h \cdot f = g_F \cdot \mu_{\text{B}} \cdot B.
-\end{equation*}
+\end{equation}
 
 
 \newpage
