@@ -1,34 +1,154 @@
-\section{Auswertung}
-\label{sec:Auswertung}
-Die in \autoref{sec:Auswertung} gezeigten Grafiken und Rechnungen sind mithilfe der Python-Bibliotheken Matplotlib \cite{matplotlib}, Scipy \cite{scipy} und Numpy \cite{numpy}
-erstellt worden.
+\section{Evaluation}
+\label{sec:Evaluation}
+The graphics and calculations shown in \autoref{sec:Evaluation} were created using the Python libraries Matplotlib \cite{matplotlib}, Scipy \cite{scipy} and Numpy \cite{numpy}.
 
-\subsubsection{}
-%Tabellen nebeneinander
+\subsection{Calculations of the molar heat capacity at constant pressure}
+\label{sec:heat_capacity}
+
+The heat capacity at constant pressure $C_p$ is calculated using the formula
+\begin{equation}\label{eq:heat_capacity}
+    C_p = \frac{M}{m} \cdot \frac{\Delta E}{\Delta T}
+\end{equation}
+where $M = \SI{63.55}{\g\per\mol}$ \cite{molar_mass_copper} is the molar mass of copper, $m = \SI{0.342}{\kg}$ \cite{V47} is the mass of the copper sample, $\Delta E = U \cdot I \cdot \Delta t$ is
+the energy supplied to the copper sample, $\Delta T = T_2 - T_1$ and $\Delta t$ is the time interval in which the energy is supplied to change the temperature from $T_1$ to $T_2$.
+
+Since the temperature is measured with heat dependent resistors, the temperature is calculated using the formula
+\begin{equation*}
+    T = 0.00134R^2 + 2.296R - 243.02 + 273.15.
+\end{equation*}
+For the measured values, an error of the last scale unit is applied which leads to the following uncertainties:
+\begin{align*}
+    \delta U &= \pm \SI{0.01}{\V}, \\
+    \delta I &= \pm \SI{0.1}{\milli\A}, \\
+    \delta R &= \pm \SI{1}{\ohm}, \\
+    \delta t &= \pm \SI{1}{\s}.
+\end{align*}
+Now one can calculate the heat capacity at constant pressure $C_p$ for each measurement using \autoref{eq:heat_capacity}. The results are shown in \autoref{tab:heat_capacity}.
+
 \begin{table}[H]
   \centering
-  \caption{}
-  \begin{tabular}{S[table-format=3] S[table-format=2(2)]}
+  \caption{Measured values and calculated heat capacity at constant pressure $C_p$.}
+  \label{tab:heat_capacity}
+  \begin{tabular}{ccccc}
       \toprule
-      {$t\,/\symup{s}$} & {$N$} \\
+      $C_p$ (\si{\joule/\mol\kelvin}) & $\Delta T$ (\si{\kelvin}) & $\Delta t$ (\si{\s}) & I (\si{\milli\A}) & U (\si{\V}) \\
       \midrule
-
+      14.54 $\pm$ 4.75 & 10.23 $\pm$ 3.34 & 312 & 156.5 & 16.39 \\
+      16.30 $\pm$ 5.43 & 10.09 $\pm$ 3.36 & 331 & 159.7 & 16.75 \\
+      16.91 $\pm$ 5.69 & 10.02 $\pm$ 3.37 & 339 & 160.0 & 16.81 \\
+      18.55 $\pm$ 6.29 & 9.99  $\pm$ 3.39 & 368 & 160.6 & 16.88 \\
+      18.98 $\pm$ 6.47 & 9.99  $\pm$ 3.41 & 374 & 161.0 & 16.95 \\
+      19.28 $\pm$ 6.60 & 9.99  $\pm$ 3.42 & 378 & 161.3 & 17.00 \\
+      21.82 $\pm$ 7.51 & 9.99  $\pm$ 3.44 & 426 & 161.6 & 17.04 \\
+      21.69 $\pm$ 7.50 & 9.98  $\pm$ 3.45 & 422 & 161.8 & 17.07 \\
+      19.16 $\pm$ 6.66 & 9.98  $\pm$ 3.47 & 372 & 161.9 & 17.09 \\
+      19.17 $\pm$ 6.69 & 9.97  $\pm$ 3.48 & 371 & 162.1 & 17.11 \\
+      26.81 $\pm$ 9.41 & 9.97  $\pm$ 3.50 & 518 & 162.2 & 17.12 \\
+      26.33 $\pm$ 9.28 & 9.96  $\pm$ 3.51 & 508 & 162.2 & 17.13 \\
+      27.45 $\pm$ 9.73 & 9.96  $\pm$ 3.53 & 528 & 162.3 & 17.16 \\
+      25.62 $\pm$ 9.13 & 9.95  $\pm$ 3.54 & 492 & 162.4 & 17.17 \\
+      26.91 $\pm$ 9.61 & 9.96  $\pm$ 3.56 & 517 & 162.5 & 17.18 \\
+      25.61 $\pm$ 9.15 & 10.01 $\pm$ 3.57 & 494 & 162.5 & 17.18 \\
+      25.18 $\pm$ 8.99 & 10.05 $\pm$ 3.59 & 488 & 162.5 & 17.17 \\
+      24.87 $\pm$ 8.93 & 10.04 $\pm$ 3.60 & 481 & 162.6 & 17.18 \\
+      26.00 $\pm$ 9.36 & 10.06 $\pm$ 3.62 & 504 & 162.6 & 17.17 \\
       \bottomrule
   \end{tabular}
-  \begin{tabular}{S[table-format=3] S[table-format=2(2)]}
-      \toprule
-      {$t\,/\symup{s}$} & {$N$} \\
-      \midrule
-      
-      \bottomrule
-  \end{tabular}
-  \label{tab:}
 \end{table}
-%Plots und Bilder
-%\begin{figure}[H]
-%  \includegraphics[width=\linewidth]{plots/.pdf}
-%  \caption{}
-%  \label{fig:}
-%\end{figure}
 
-\newpage
+\subsection{Calculations of the molar heat capacity at constant volume}
+\label{sec:heat_capacity_vol}
+
+The heat capacity at constant volume $C_V$ can be calculated using thermodynamic relations. The heat capacity at constant pressure $C_p$ and the coefficient of thermal expansion $\alpha$ are related to the heat capacity at constant volume $C_V$ by
+\begin{equation}\label{eq:heat_capacity_vol}
+    C_V = C_p - 9 \alpha^2 \kappa V_0 T.
+\end{equation}
+The coefficient of thermal expansion $\alpha$ is given in the instruction manual \cite{V47} for the corresponding temperatures. The isothermal compressibility for copper is given by $\kappa = \SI{140}{\giga\pascal}$ \cite{isothermal_compressibility} and the molar volume $V_0 = \SI{7.11e-6}{\m\cubed\per\mol}$ \cite{molar_volume_copper}.
+Plugging these values into \autoref{eq:heat_capacity_vol} and using the values for $C_p$ from \autoref{tab:heat_capacity} one can calculate the heat capacity at constant volume $C_V$ for each measurement. 
+The results are shown in \autoref{tab:heat_capacity_vol}.
+
+\begin{table}[H]
+  \centering
+  \caption{$C_p$, $\alpha$ and calculated $C_V$ for each measurement.}
+  \label{tab:heat_capacity_vol}
+  \begin{tabular}{cccc}
+      \toprule
+      $C_p$ (\si{\joule/\mol\kelvin}) & $T$ (\si{\kelvin}) & $\alpha$ (\si{1/\mega\kelvin}) & $C_V$ (\si{\joule/\mol\kelvin})\\
+      \midrule
+      14.54 $\pm$ 4.75 & 82.94 $\pm$ 2.36  & 8.50e-06 & 14.48 $\pm$ 4.75 \\
+      16.30 $\pm$ 5.43 & 93.17 $\pm$ 2.37  & 9.75e-06 & 16.23 $\pm$ 5.42 \\
+      16.91 $\pm$ 5.69 & 103.26 $\pm$ 2.38 & 1.07e-05 & 16.80 $\pm$ 5.69 \\
+      18.55 $\pm$ 6.29 & 113.28 $\pm$ 2.39 & 1.15e-05 & 18.41 $\pm$ 6.29 \\
+      18.98 $\pm$ 6.47 & 123.27 $\pm$ 2.40 & 1.21e-05 & 18.82 $\pm$ 6.47 \\
+      19.28 $\pm$ 6.60 & 133.27 $\pm$ 2.41 & 1.27e-05 & 19.09 $\pm$ 6.60 \\
+      21.82 $\pm$ 7.51 & 143.26 $\pm$ 2.42 & 1.32e-05 & 21.60 $\pm$ 7.51 \\
+      21.69 $\pm$ 7.50 & 153.24 $\pm$ 2.44 & 1.36e-05 & 21.44 $\pm$ 7.50 \\
+      19.16 $\pm$ 6.66 & 163.23 $\pm$ 2.45 & 1.39e-05 & 18.88 $\pm$ 6.66 \\
+      19.17 $\pm$ 6.69 & 173.21 $\pm$ 2.46 & 1.43e-05 & 18.85 $\pm$ 6.69 \\
+      26.81 $\pm$ 9.41 & 183.18 $\pm$ 2.47 & 1.45e-05 & 26.47 $\pm$ 9.41 \\
+      26.33 $\pm$ 9.28 & 193.15 $\pm$ 2.48 & 1.48e-05 & 25.95 $\pm$ 9.28 \\
+      27.45 $\pm$ 9.73 & 203.11 $\pm$ 2.49 & 1.50e-05 & 27.04 $\pm$ 9.72 \\
+      25.62 $\pm$ 9.13 & 213.07 $\pm$ 2.50 & 1.52e-05 & 25.18 $\pm$ 9.12 \\
+      26.91 $\pm$ 9.61 & 223.01 $\pm$ 2.51 & 1.54e-05 & 26.44 $\pm$ 9.61 \\
+      25.61 $\pm$ 9.15 & 232.98 $\pm$ 2.52 & 1.56e-05 & 25.10 $\pm$ 9.14 \\
+      25.18 $\pm$ 8.99 & 242.99 $\pm$ 2.53 & 1.58e-05 & 24.64 $\pm$ 8.99 \\
+      24.87 $\pm$ 8.93 & 253.03 $\pm$ 2.54 & 1.59e-05 & 24.29 $\pm$ 8.92 \\
+      26.00 $\pm$ 9.36 & 263.07 $\pm$ 2.55 & 1.61e-05 & 25.39 $\pm$ 9.35 \\
+      \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Calculations of the Debye temperature}
+\label{sec:debye_temperature}
+
+The Debye temperature $\theta_D$ is determined by using the given values for $\frac{\theta_D}{T}$ in the table in the instruction manual \cite{V47}. The Debye temperature is then calculated
+for each measurement below the temperature of \SI{180}{\kelvin} by multiplying the given values with the corresponding temperature. After that, the weighted mean of the calculated Debye temperatures
+is calculated. The results are shown in \autoref{tab:summary_calculated_values}. For the weighted mean the weights are calculated using the uncertainties of the calculated Debye temperatures so that 
+the mean results in
+\begin{equation*}
+    \hat{x} = \frac{\sum_i \frac{x_i}{\sigma_i^2}}{\sum_i \frac{1}{\sigma_i^2}}.
+\end{equation*}
+
+\begin{table}[H]
+  \centering
+  \caption{Calculated Debye temperatures for each measurement.}
+  \label{tab:summary_calculated_values}
+  \begin{tabular}{cccc}
+      \toprule
+      $\frac{\theta_D}{T}$ & $\theta_D$ (\si{\kelvin})& $T$ (\si{\kelvin}) & $C_V$ (\si{\joule/\mol\kelvin}) \\
+      \midrule
+      3.5 & 290.29 $\pm$ 8.25 & 82.94 $\pm$ 2.36 & 14.48 $\pm$ 4.75 \\
+      3.1 & 288.83 $\pm$ 7.34 & 93.17 $\pm$ 2.37 & 16.23 $\pm$ 5.42 \\
+      2.9 & 299.45 $\pm$ 6.90 & 103.26 $\pm$ 2.38 & 16.80 $\pm$ 5.69 \\
+      2.5 & 283.20 $\pm$ 5.98 & 113.28 $\pm$ 2.39 & 18.41 $\pm$ 6.29 \\
+      2.4 & 295.86 $\pm$ 5.77 & 123.27 $\pm$ 2.40 & 18.82 $\pm$ 6.47 \\
+      2.4 & 319.84 $\pm$ 5.79 & 133.27 $\pm$ 2.41 & 19.09 $\pm$ 6.60 \\
+      1.7 & 243.53 $\pm$ 4.12 & 143.26 $\pm$ 2.42 & 21.60 $\pm$ 7.51 \\
+      1.8 & 275.84 $\pm$ 4.38 & 153.24 $\pm$ 2.44 & 21.44 $\pm$ 7.50 \\
+      2.4 & 391.74 $\pm$ 5.87 & 163.23 $\pm$ 2.45 & 18.88 $\pm$ 6.66 \\
+      2.4 & 415.69 $\pm$ 5.90 & 173.21 $\pm$ 2.46 & 18.85 $\pm$ 6.69 \\
+      \bottomrule
+  \end{tabular}
+\end{table}
+Using the values from \autoref{tab:summary_calculated_values} the weighted mean of the Debye temperatures is calculated to be
+\begin{equation*}
+    \theta_D = 303.35 \pm 1.79 \si{\kelvin}.
+\end{equation*}
+\\
+The Debye temperature $\theta_D$ can also be calculated by theoretical considerations. Assuming that the Debye model is valid for the copper sample,
+the Debye temperature is approximated by
+\begin{equation}\label{eq:debye_temperature}
+    \theta_D = \left(\frac{hv_s}{k_B} \cdot \frac{6 \pi^2 N}{V}\right)^{\frac{1}{3}}.
+\end{equation}
+Now assuming that $v_s$ is given by
+\begin{equation*}
+  v_s = (\frac{3 v_l^3 v_t^3}{2 v_l^3 + v_t^3})^{\frac{1}{3}}	
+\end{equation*}
+where $v_l = \SI{4.7e3}{\m\per\s}$ and $v_t = \SI{2.2e3}{\m\per\s}$ \cite{V47} are the longitudinal and transversal sound velocities, respectively. The number of atoms per volume $N$ is given by
+\begin{equation*}
+    N = \frac{N_A}{V} = \frac{N_A}{M} \cdot \frac{m}{V} = \SI{3.25e24}{}.
+\end{equation*}
+$V$ is the volume of copper and $N_A$ is the Avogadro constant. Plugging these values into \autoref{eq:debye_temperature} one can calculate the Debye temperature $\theta_D$ to be
+\begin{equation*}
+    \theta_D = 332.63 \si{\kelvin}.
+\end{equation*}

@@ -128,5 +128,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Remove pdf files
-*.pdf
+#remove all folders with name build
+**/build/

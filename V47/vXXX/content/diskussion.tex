@@ -1,23 +1,23 @@
-\section{Diskussion}
+\section{Discussion}
 \label{sec:Diskussion}
-Im Folgenden werden die prozentualen Abweichungen mit 
+In the following, the percentage deviations are calculated with
 \begin{equation}\label{eq:1}
-    \Delta = |\frac{exp - theo}{theo}|\cdot 100\%
+    \Delta = |\frac{exp - theo}{theo}|\cdot 100\%.
 \end{equation}
-berechnet.
 
-%Tabelle
-\begin{table}[H]
-    \centering
-    \caption{Experimentell bestimmte Halbwärtszeit $T_{exp}$, Theoriewert $T_{theo}$ und Abweichung in \%.}
-    \begin{tabular}{c c c}
-        \toprule
-        {$T_{exp}\,/\symup{s}$} & {$T_{theo}\,/\symup{s}$} & {$\Delta\,/\symup{\%}$}\\
-        \midrule
-        
-        \bottomrule
-    \end{tabular}
-    \label{tab:Diskussion}
-\end{table}
+\subsection{Heat capacity at constant pressure and constant volume}
 
+The heat capacity at constant pressure $C_p$ and constant volume $C_V$ has been calculated in \autoref{sec:heat_capacity} and \autoref{sec:heat_capacity_vol}. As expected, the heat capacity
+at constant pressure is higher than the heat capacity at constant volume. Expected is a $T^3$-dependence of the heat capacity which cannot really be verified with the given data because the 
+uncertainties in the initial values for the resistors are amplified by the calculation of the temperature and thus lead to a high uncertainty in the heat capacity. 
+Furthermore, there are some outliers in the data which could be caused by a significant temperature difference between the shield and the copper sample. Even though it is tried to minimize this
+effect by constantly adjusting the power supply to heat the shield to the same temperature as the copper sample, it is not possible to completely eliminate this effect.\\
+Only one reference value for the heat capacity at constant pressure could be found \cite{c_p} at room temperature. The value is $C_p = \SI{24.47}{\joule/\mol\kelvin}$ which is in the range of the
+measured values.\\
+
+\subsection{Debye temperature}
+The Debye temperature was calculated from the measured data aswell as from a theoretical point of view. The theoretical value is $\theta_D = \SI{332.63}{\kelvin}$ and the from the measurement 
+constructed value is $\theta_D = \SI{303.35(1.79)}{\kelvin}$. The percentage deviation is calculated with \autoref{eq:1} and is $\Delta = 8.77\%$. The theoretical value is not within the
+uncertainty of the measured value. This could be caused by the effects mentioned in the previous section.\\
+Since the experimental value is in the range of the theoretical value, the Debye model can nevertheless be considered as valid for the copper sample.\\
 \newpage
