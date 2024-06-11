@@ -1,7 +1,7 @@
 \section{Introduction}
 \label{sec:Zielsetzung}
-Goal of this experiment is the measurement of the temperature dependency of the heat capacity $C_V$ at constant volume, according to the Debye model. 
-The Debye temperature $\Theta_D$ will also be measured and compared to the literature value.
+Goal of this experiment is the measurement of the temperature dependency of the heat capacity $C_V$ at constant preassure and volume. 
+The Debye temperature $\Theta_D$ will also be measured and compared to the theory value.
 
 \section{Theory}
 \label{sec:Theorie}
@@ -14,18 +14,18 @@ The heat capacity is given by the relation
     \label{eqn:t1}
     C_V = \left. \frac{\partial Q}{\partial T} \right|_{V, N} = \left. \frac{\partial U}{\partial T} \right|_{V, N}
 \end{equation}
-where $U$ is the systems inner energy. The heat capacity at constant preassure is given by
+where $U$ is the solids inner energy. The heat capacity at constant preassure is given by
 \begin{equation}
     C_p = \left. \frac{\partial Q}{\partial T} \right|_{p, N} = \left. \frac{\partial H}{\partial T} \right|_{p, N}
 \end{equation}
-where $H$ is the enthalpy of the system. The relation $C_V \leq C_p$ is true for any system, as the system at constant preassure hast to expand when applying an amount of heat $\Delta Q$ to it, thus doing more work $\Delta W$ which increases the heat capacity.
+where $H$ is the enthalpy of the system. The relation $C_V \leq C_p$ is true for any system, as the system at constant preassure has to expand when applying an amount of heat $\Delta Q$ to it, thus doing more work $\Delta W$ which increases the heat capacity.
 $C_V$ and $C_p$ are fundamentally connected by the thermal expansion coefficient $\alpha$ and the compressibility $\kappa$ in the relation
 \begin{equation}
     \label{eqn:t2}
     C_p - C_V = 9 \alpha^2 \kappa V_0 \, ,
 \end{equation}
 where $V_0$ is the molar volume of the solid.
-To determine the heat capacity of a solid state body, we can approximate each atom in the solid as a harmonic oscillator, given by the Hamiltonian for a single atom in the solid state body
+To determine the heat capacity of a solid state body, we can approximate each atom in the solid as a harmonic oscillator, given by the Hamiltonian for a single atom in the solid 
 \begin{equation}
     \mathcal{H} \left( \vec{p}, \vec{q} \right) = \frac{\vec{p}^2}{2m} + \frac{1}{2} k \vec{q}^2 \, .
 \end{equation}
@@ -39,15 +39,15 @@ one can determine, that
                                     &= \frac{1}{2} \sum_{i=1}^3 \langle p_i \frac{\partial \mathcal{H}}{\partial p_i} \rangle + \langle q_i \frac{\partial \mathcal{H}}{\partial q_i}\rangle \\
                                     &= 3 k_B T
 \end{align}
-is the heat capacity of a single Atom in a solid state body.
+is the inner energy of a single Atom in a solid state body.
 By applying avogrados number $N_A$ and using \autoref{eqn:t1}, one can calculate the molar heat capacity of a solid state given by the doulong petite law
 \begin{equation}
     C_V = 3 R T
 \end{equation}
 \subsection{Oscillation of the cristalline structure}
-In order to understand the heat capacity of a solid state body, one has to first understand the oscillations of the cristalline structure, which will be introduced in this subsection.
+In order to understand the heat capacity of a solid state body, one has to first understand the oscillations of its cristalline structure, which will be introduced in this subsection.
 The cristalline structure, when viewed from a purely mathematical perspective, becomes a set of vectors which are linear combinations of its basis vectors. This static view of a solid state body can be filled with motion when one imagines these vectors as springs, connecting each pair of neighbouring atoms in the lattice. The problem to be solved is then nothing more than the simple harmonic equations of motion every physicist has solved at least once in their live.
-This approach neglects the electrons contribution to the overall problem as the introduced springs are nothing more than a quadratic approximation of the more complex electromagnetic potential each atom experiences. If we assume the electrons to be significantly faster than atomic nuclei, individual electromagnetic contributions of the electrons to the electromagnetic potential one atom experiences in the cristalline structure can be neglected as a static background.
+This approach neglects the electrons contribution to the overall problem. The introduced springs are nothing more than a quadratic approximation of the more complex electromagnetic potential each atom experiences. If we assume the electrons to be significantly faster than the atomic nuclei, individual electromagnetic contributions of the electrons to the electromagnetic potential one atom experiences in the lattice can be neglected as a static background.
 This approach is known as the Born-Oppenheimer approximation and it allows us to approximate the electromagnetic potential in quadratic order, resulting in a harmonic potential which acts like a spring.
 \begin{figure}[H]
     \centering
@@ -56,13 +56,13 @@ This approach is known as the Born-Oppenheimer approximation and it allows us to
     \label{fig:t1}
 \end{figure}
 \noindent
-The equations of motion for a 2D lattice of 2 Atoms with different masses $M_1$, $M_2$ and equal coupling $C$, see \autoref{fig:t1}, can then intuitively be written as 
+The equations of motion for a 2D lattice of 2 Atoms with different masses $M_1$, $M_2$ and equal coupling $f$, see \autoref{fig:t1}, can then intuitively be written as 
 \begin{align}
     M_1 \frac{\text{d}^2 u_n}{\text{dt}^2} &= f \left( v_n - u_n \right) + f \left( v_{n-1} - u_n \right) \\
     M_2 \frac{\text{d}^2 v_n}{\text{dt}^2} &= f \left( u_n - v_n \right) + f \left( u_{n+1} - v_n \right)
 \end{align}
 where $u_n$ and $v_n$ are the deflection function of each type of atom in a latice that can be seen in \autoref{fig:t1}.
-Solving the equations for this simple case results in two solutions for the frequencies of the lattice oscillations, which can be seen in \autoref{fig:t2}.
+Solving the equations for one row of this simple case, results in two solutions for the frequencies of the lattice oscillations, which can be seen in \autoref{fig:t2}.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.7\textwidth]{dispersion.pdf}
@@ -70,7 +70,7 @@ Solving the equations for this simple case results in two solutions for the freq
     \label{fig:t2}
 \end{figure}
 \noindent
-The upper branch of the dispersion relation in \autoref{fig:t2} is called the optical branch and the lower branch is called the accoustic branch. The optical branch is a result of the different masses $M_1$ and $M_2$ and is not present in a lattice with one basis. There are $3N$ branches in a $3D$ lattice of $N$ different atoms, with $3N-3$ accoustic branches and $3$ optical branches, which are not dependent on the number of different atoms in the lattice.
+The upper branch of the dispersion relation in \autoref{fig:t2} is called the optical branch and the lower branch is called the accoustic branch. The optical branch is a result of the different masses $M_1$ and $M_2$ and is not present in a lattice with one atomic basis. There are $3N$ branches in a $3D$ lattice of $N$ different atoms, with $3N-3$ accoustic branches and $3$ optical branches, which are not dependent on the number of different atoms in the lattice.
 The different branches of the dispersion relation of a solid state body are often referred to as phonons, wich are quantized lattice vibration. Phonons are Bosons and follow the Bose-Einstein distribution given by 
 \begin{equation} 
     \label{eqn:t3}
@@ -98,13 +98,14 @@ Because copper is a single basis atom, it has 3 accoustic vibrational modes of w
 \end{equation}
 where $v_s$ is a function of the transversal and longitudinal speeds of sound in the medium $v_t$ and $v_l$, given by
 \begin{equation}
+    \label{eqn:t5}
     v_s^3 = \frac{3 v_l^3 v_t^3}{2v_l^3 + v_t^3} \, .
 \end{equation}
 Given the integral
 \begin{equation}
 U = \int_0^{\omega_D} Z\left(\omega\right) \langle n_{BE} \rangle \text{d}\omega \, ,
 \end{equation}
-The heat capacity can again easily be determined using \autoref{eqn:t1} resulting in an approximate solution for high and low temperatures to becomes
+The heat capacity can again easily be determined using \autoref{eqn:t1} resulting in an approximate solution for high and low temperatures to be
 \begin{equation}
     C_V = 
     \begin{cases}
@@ -115,6 +116,7 @@ The heat capacity can again easily be determined using \autoref{eqn:t1} resultin
 \end{equation}
 $\Theta_D$ is the Debye temperature which is given by the expression
 \begin{equation}
+    \label{eqn:t4}
     \Theta_D = \frac{\hbar \omega_D}{k_B} = \frac{\hbar v_s}{k_B}\left( \frac{6 \pi^2 N}{V} \right)^{\frac{1}{3}} \, .
 \end{equation}
 The Debye approximation is more accurate for smaller temperatures, which is where accoustic phonons dominate the heat propagation. It is thus the approximation which will be used in this experiment, as it fits the single atom basis of the copper cristalline structure.
