@@ -1,0 +1,34 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Zielsetzung}{3}{section.1}%
+\contentsline {section}{\numberline {2}Theorie}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Aktives Medium}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Pumpquelle}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Resonator}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Mehrniveausystem}{5}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Modenstruktur}{5}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Longitudinale Moden}{5}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}Transversale Moden}{6}{subsubsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.6}Polarisation}{6}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Wellenlänge}{7}{subsection.2.7}%
+\contentsline {section}{\numberline {3}Aufbau}{8}{section.3}%
+\contentsline {section}{\numberline {4}Durchführung}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Justage des Lasers}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Stabilitätsbedingung}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Transversalmoden}{9}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Longitudinalmoden}{9}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Polarisation}{9}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Wellenlänge}{9}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Auswertung}{10}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Überprüfung der Stabilitätsbedingung}{10}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Messung der Wellenlänge des LASERs}{12}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Messung der Polarisationsrichtung des LASERs}{13}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Abhängigkeit der longitudinalen Resonatormoden von der Resonatorlänge}{15}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Messung der transversalen LASER Moden}{17}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Diskussion}{19}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Stabilitätsbedingung}{19}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Wellenlänge des LASERs}{19}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Polarisationsrichtung des LASERs}{19}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Longitudinale Moden des LASERs}{20}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Transversale Moden des LASERs}{20}{subsection.6.5}%
+\contentsline {section}{\nonumberline Literatur}{21}{section*.19}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

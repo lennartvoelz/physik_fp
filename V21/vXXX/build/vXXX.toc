@@ -1,0 +1,20 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Zielsetzung}{3}{section.1}%
+\contentsline {section}{\numberline {2}Theorie}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Drehimpuls, magnetisches Moment und Zeeman-Effekt}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Mechanismus des optischen Pumpens}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Optisches Pumpen bei Rubidium}{5}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Aufbau und Durchführung}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Aufbau}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Durchführung}{8}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Auswertung}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Messung der Resonanzfeldstärke der Sweep Spule}{9}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Messung des Lande-Faktors und des Kernspins}{11}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Messung des Isotopenverhältnisses}{11}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Abschätzung des quadratischen Zeeman Effekts}{12}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Diskussion}{13}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Messung der Resonanzfeldstärke der Sweep Spule}{13}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Messung desLande-Faktors und des Kernspins}{13}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Messung des Isotopenverhältnisses und abschätzung des quadratischen Zeeman-Effekts}{13}{subsection.5.3}%
+\contentsline {section}{\nonumberline Literatur}{14}{section*.9}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

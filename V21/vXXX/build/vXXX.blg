@@ -1,0 +1,17 @@
+[0] Config.pm:306> INFO - This is Biber 2.18
+[0] Config.pm:309> INFO - Logfile is 'build/vXXX.blg'
+[100] biber:340> INFO - === Tue Jun  4, 2024, 12:29:58
+[157] Biber.pm:418> INFO - Reading 'build/vXXX.bcf'
+[216] Biber.pm:978> INFO - Found 9 citekeys in bib section 0
+[229] Biber.pm:4401> INFO - Processing section 0
+[262] Biber.pm:4592> INFO - Looking for bibtex file 'lit.bib' for section 0
+[540] bibtex.pm:1713> INFO - LaTeX decoding ...
+[565] bibtex.pm:1518> INFO - Found BibTeX data source '../lit.bib'
+[763] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[763] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[763] Biber.pm:4221> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[763] Biber.pm:4227> INFO - No sort tailoring available for locale 'de-DE'
+[813] bbl.pm:654> INFO - Writing 'build/vXXX.bbl' with encoding 'UTF-8'
+[830] bbl.pm:757> INFO - Output to build/vXXX.bbl
+[830] Biber.pm:130> WARN - BibTeX subsystem: /tmp/biber_tmp_UDUd/03cb965aa3b3472c2289b9a0b44cc47a_8655.utf8, line 104, warning: 54 characters of junk seen at toplevel
+[830] Biber.pm:132> INFO - WARNINGS: 1
